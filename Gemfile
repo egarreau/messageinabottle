@@ -8,6 +8,7 @@ gem 'sinatra-activerecord'
 gem 'rake'
 gem 'require_all'
 gem 'pony'
+gem 'pg'
 
 group :development do
 	gem 'shotgun'
