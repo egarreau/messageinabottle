@@ -10,9 +10,9 @@ class MessageInABottle < Sinatra::Base
   end
 
   post '/create' do
-    @email = params['email']
-    r= Reader.find_or_create_by(email: @email)
-    "Successfully subscribed! #{r.email}"
+    email = params['email']
+    r = Reader.find_or_create_by(email: email)
+    redirect to("/confirm-subscribe?email=#{r.email}")
   end
 
   post '/delete' do
@@ -23,5 +23,13 @@ class MessageInABottle < Sinatra::Base
     else
       "Unsubscribe successful!"
     end
+  end
+
+  get '/about' do
+    erb :about
+  end
+
+  get '/confirm-subscribe' do
+    erb :confirm_subscribe, locals: {email: params[:email]}
   end
 end
