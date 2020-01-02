@@ -2,7 +2,7 @@ require_relative 'config/environment'
 
 class MessageInABottle < Sinatra::Base
   get '/' do
-    redirect '/about'
+    redirect '/subscribe'
   end
 
   get '/about' do

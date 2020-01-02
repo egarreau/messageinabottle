@@ -1,12 +1,19 @@
 /*
-🌊 Waves, a tiny stylesheet
+🌊 Waves, a tiny, fussy stylesheet
 * by Evangeline Garreau
 * January 1, 2020
-* Structure and some styling shamelessly stolen from Skeleton (www.getskeleton.com)
+* Structure shamelessly stolen from Skeleton (www.getskeleton.com)
 */
 
 /* Table of contents
 ––––––––––––––––––––––––––––––––––––––––––––––––––
+* Base Styles
+* Header
+* Nav
+* Text
+* Form
+* Misc
+* Media Queries
 */
 
 /* Base Styles
@@ -16,6 +23,7 @@ html {
 }
 
 body {
+  font-family: 'Rosario', sans-serif;
   font-size: 4.5rem;
   line-height: 10rem;
   text-align: center;
@@ -31,35 +39,29 @@ p {
   padding: 0 5rem;
 }
 
-/* Typography
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-body {
-  font-family: 'Rosario', sans-serif; }
-
 h1, h2, h3 {
-  font-family: 'Ibarra Real Nova', serif; }
-
-.supertitle, .subtitle {
-  font-style: italic; }
-
-.paragraph {
-  text-align: left;
-  line-height: 6rem;
-  margin-bottom: 10rem;
+  font-family: 'Ibarra Real Nova', serif;
 }
 
-/* Spacing
+
+/* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-form, .header {
+.header {
   margin-bottom: 6rem;
 }
-
 .title {
-  margin: 0; }
+  margin: 0; 
+}
 .supertitle {
-  margin-bottom: 0; }
+  margin-bottom: 0; 
+}
 .subtitle {
-  margin-top: .5rem; }
+  margin-top: .5rem; 
+}
+.supertitle, .subtitle {
+  font-style: italic; 
+}
+
 
 /* Nav
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -75,17 +77,20 @@ nav {
   color: #595959;
 }
 
-@media (min-width: 990px) {
+
+/* Text
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.paragraph {
+  text-align: left;
+  line-height: 6rem;
+  margin-bottom: 10rem;
 }
 
-/* Links
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
   color: #008094;
   text-decoration: none;
   font-weight: 900;
 }
-a:hover {}
 
 
 /* Form
@@ -109,7 +114,6 @@ input[type="submit"] {
   color: #fff;
 }
 
-
 input[type="submit"]:hover,
 input[type="submit"]:focus {}
 input[type="email"]:focus {}
@@ -128,32 +132,13 @@ input[type="email"] {
   text-align: center;
 }
 
-/* Clearing
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-/* Self Clearing Goodness */
-.container:after,
-.row:after,
-.u-cf {
-  content: "";
-  display: table;
-  clear: both; }
-
-
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/*
-Note: The best way to structure the use of media queries is to create the queries
-near the relevant code. For example, if you wanted to change the styles for buttons
-on small devices, paste the mobile query code up in the buttons section and style it
-there.
-*/
-
+/* Desktop */
 @media (min-width: 990px) {
   html {
     font-size: 12px;
   }
-
   body { 
     font-size: 1.5rem; 
     line-height: 3rem;
@@ -177,32 +162,14 @@ there.
     margin-bottom: 5rem;
   }
 
+  form {
+    margin: 4rem 6rem 6rem 6rem;
+  }
   input[type="email"] {
     margin: 1rem 0;
     border: .5rem solid #008094;
   }
-
   input[type="email"], input[type="submit"] {
     padding: 1rem;
   }
-
-  form {
-    margin: 4rem 6rem 6rem 6rem;
-  }
 }
-
-
-/* Larger than mobile */
-@media (min-width: 400px) {}
-
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
-
-/* Larger than tablet */
-@media (min-width: 750px) {}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {}
-
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {}
