@@ -11,40 +11,47 @@
 
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+  font-size: 10.5px;
+}
+
 body {
-  font-size: 3em;
+  font-size: 4.5rem;
+  line-height: 10rem;
   text-align: center;
   color: #2B2B2B;
 }
 
-.container {
-  margin: 0 auto;
-  padding: 0 1em;
+p {
+  color: #595959;
 }
 
-@media (min-width: 990px) {
-  body { font-size: 1.5em; }
-  .container { max-width: 700px; }
+.container {
+  margin: 0 auto;
+  padding: 0 5rem;
 }
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 body {
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Rosario', sans-serif; }
+
 h1, h2, h3 {
-  font-family: 'Lora', serif; }
+  font-family: 'Ibarra Real Nova', serif; }
 
 .supertitle, .subtitle {
   font-style: italic; }
 
 .paragraph {
   text-align: left;
+  line-height: 6rem;
+  margin-bottom: 10rem;
 }
 
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 form, .header {
-  margin-bottom: 3em;
+  margin-bottom: 6rem;
 }
 
 .title {
@@ -52,20 +59,23 @@ form, .header {
 .supertitle {
   margin-bottom: 0; }
 .subtitle {
-  margin-top: .5em; }
+  margin-top: .5rem; }
 
 /* Nav
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 nav {
-  padding: 1em;
-  margin-bottom: 2em;
-  border-bottom: .2em double #008094;
+  padding: 3rem;
+  margin-bottom: 5rem;
+  border-bottom: .6rem double #008094;
 }
 
 .nav-item {
-  padding: .5em;
+  padding: 0 2rem;
   text-decoration: none;
   color: #595959;
+}
+
+@media (min-width: 990px) {
 }
 
 /* Links
@@ -83,14 +93,14 @@ a:hover {}
 input[type="email"], input[type="submit"] {
   display: block;
   width: 100%;
-  padding: .5em;
-  border-radius: .1em;
+  padding: 2rem;
+  border-radius: .3rem;
   text-align: center;
 }
 
 input[type="email"] {
-  margin: 1em 0;
-  border: .3em solid #008094;
+  margin: 3rem 0;
+  border: 1rem solid #008094;
 }
 
 input[type="submit"] {
@@ -113,6 +123,11 @@ input[type="email"] {
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+.break {
+  display: block;
+  text-align: center;
+}
+
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -133,6 +148,48 @@ near the relevant code. For example, if you wanted to change the styles for butt
 on small devices, paste the mobile query code up in the buttons section and style it
 there.
 */
+
+@media (min-width: 990px) {
+  html {
+    font-size: 12px;
+  }
+
+  body { 
+    font-size: 1.5rem; 
+    line-height: 3rem;
+  }
+  .container { 
+    max-width: 700px; 
+  }
+
+  nav {
+    padding: 2rem;
+  }
+
+  .header {
+    font-size: 2rem;
+    line-height: 4rem;
+    margin-bottom: 0;
+  }
+
+  .paragraph {
+    line-height: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  input[type="email"] {
+    margin: 1rem 0;
+    border: .5rem solid #008094;
+  }
+
+  input[type="email"], input[type="submit"] {
+    padding: 1rem;
+  }
+
+  form {
+    margin: 4rem 6rem 6rem 6rem;
+  }
+}
 
 
 /* Larger than mobile */
