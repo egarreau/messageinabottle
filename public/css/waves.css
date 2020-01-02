@@ -1,0 +1,150 @@
+/*
+🌊 Waves, a tiny stylesheet
+* by Evangeline Garreau
+* January 1, 2020
+* Structure and some styling shamelessly stolen from Skeleton (www.getskeleton.com)
+*/
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+  font-size: 3em;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 550px) {
+  font-size: 1em;
+}
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+  font-family: 'Lato', sans-serif; }
+h1, h2, h3 {
+  font-family: 'Lora', serif; }
+
+.supertitle, .subtitle {
+  font-style: italic; }
+
+.paragraph {
+  text-align: left;
+}
+
+/* Spacing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+form, .header {
+  margin-bottom: 3em;
+}
+
+.title {
+  margin: 0; }
+.supertitle {
+  margin-bottom: 0; }
+.subtitle {
+  margin-top: .5em; }
+
+/* Nav
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+nav {
+  padding: 1em;
+  margin-bottom: 2em;
+  border-bottom: .2em dotted #008094;
+}
+
+.nav-item {
+  padding: .5em;
+  text-decoration: none;
+  color: #595959;
+}
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: #008094;
+  text-decoration: none;
+}
+a:hover {}
+
+
+/* Form
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"], input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: .5em;
+  border-radius: .1em;
+  text-align: center;
+}
+
+input[type="email"] {
+  margin: 1em 0;
+  border: .3em solid #008094;
+}
+
+input[type="submit"] {
+  border: none;
+  background: #008094;
+  color: #fff;
+}
+
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {}
+input[type="email"]:focus {}
+
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
