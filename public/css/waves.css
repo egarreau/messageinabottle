@@ -18,14 +18,13 @@ body {
 }
 
 .container {
-  width: 100%;
-  max-width: 860px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1em;
 }
 
 @media (min-width: 550px) {
-  font-size: 1em;
+  body { font-size: 1.5em; }
+  .container { max-width: 700px; }
 }
 
 /* Typography
@@ -60,7 +59,7 @@ form, .header {
 nav {
   padding: 1em;
   margin-bottom: 2em;
-  border-bottom: .25em dotted #008094;
+  border-bottom: .2em double #008094;
 }
 
 .nav-item {
