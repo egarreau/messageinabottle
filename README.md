@@ -1,6 +1,6 @@
 # Message in a Bottle
 
-A single-use, analytics-free email subscription platform built to distribute the newsletter May I Recommend. [Live site lives here.](https://letter-in-a-bottle.herokuapp.com/) (The URL is `letter-in-a-bottle` because `message was taken` 🙃)
+A single-use, analytics-free email subscription platform built to distribute the newsletter May I Recommend. [Live site lives here.](https://letter-in-a-bottle.herokuapp.com/) (The URL is `letter-in-a-bottle` because `message` was taken 🙃)
 
 ## Why?
 
