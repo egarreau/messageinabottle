@@ -11,7 +11,7 @@ class Mailer
       :to => ENV['gmail_user'],
       :bcc => recipient,
       :from => ENV['gmail_user'],
-      :headers => { "From" => "Evangeline Garreau <#{ENV['gmail_user']}>" }
+      :headers => { "From" => "Evangeline Garreau <#{ENV['gmail_user']}>" },
       :subject => subject,
       :html_body => File.read(filename),
       :via => :smtp,
