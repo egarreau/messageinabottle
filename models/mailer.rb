@@ -2,14 +2,22 @@ class Mailer
 
   def self.send(filename, subject, send_type)
     if send_type == 'send to everyone'
-      recipient = Reader.emails
+      progress_bar = ProgressBar.new(Reader.emails.length, :bar, :percentage)
+      Reader.emails.each do |email|
+        send_email(filename, subject, email)
+        progress_bar.increment!
+      end
     else
-      recipient = nil
+      send_email(filename, subject, ENV['test_email'])
     end
 
-    m = Pony.mail({
-      :to => ENV['gmail_user'],
-      :bcc => recipient,
+  end
+
+  private
+
+  def self.send_email(filename, subject, recipient)
+    Pony.mail({
+      :to => recipient,
       :from => ENV['gmail_user'],
       :headers => { "From" => "Evangeline Garreau <#{ENV['gmail_user']}>" },
       :subject => subject,
@@ -24,6 +32,5 @@ class Mailer
         :domain               => "localhost.localdomain" 
       } 
     })
-    puts m
   end
 end
