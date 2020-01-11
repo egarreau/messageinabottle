@@ -4,8 +4,10 @@ class Mailer
     if send_type == 'send to everyone'
       progress_bar = ProgressBar.new(Reader.emails.length, :bar, :percentage)
       Reader.emails.each do |email|
-        send_email(filename, subject, email)
-        progress_bar.increment!
+        unless email == ""
+          send_email(filename, subject, email)
+          progress_bar.increment!
+        end
       end
     else
       send_email(filename, subject, ENV['test_email'])
