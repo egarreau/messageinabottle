@@ -20,7 +20,7 @@ class MessageInABottle < Sinatra::Base
   post '/create' do
     email = params['email']
     r = Reader.find_or_create_by(email: email)
-    html = "Thank you for subscribing! <a href='http://localhost:9393/welcome/#{r.id}'>Click here to confirm your subscription.</a>"
+    html = "Thank you for subscribing! <a href='https://letter-in-a-bottle.herokuapp.com/welcome/#{r.id}'>Click here to confirm your subscription.</a>"
     Mailer.send_email(html, 'Welcome to the archipelago!', r.email)
     redirect "/confirm-subscribe?email=#{r.email}"
   end
