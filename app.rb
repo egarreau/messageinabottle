@@ -20,6 +20,8 @@ class MessageInABottle < Sinatra::Base
   post '/create' do
     email = params['email']
     r = Reader.find_or_create_by(email: email)
+    html = "Thank you for subscribing! <a href='http://localhost:9393/welcome/#{r.id}'>Click here to confirm your subscription.</a>"
+    Mailer.send_email(html, 'Welcome to the archipelago!', r.email)
     redirect "/confirm-subscribe?email=#{r.email}"
   end
 
@@ -32,6 +34,12 @@ class MessageInABottle < Sinatra::Base
       success = true
     end
     redirect "/confirm-unsubscribe?success=#{success}"
+  end
+
+  get '/welcome/:id' do
+    reader = Reader.find(params[:id]) 
+    reader.update(status: 'confirmed')
+    erb :welcome
   end
 
   get '/confirm-subscribe' do
