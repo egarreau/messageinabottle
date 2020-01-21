@@ -20,8 +20,8 @@ class MessageInABottle < Sinatra::Base
   post '/create' do
     email = params['email']
     r = Reader.find_or_create_by(email: email)
-    html = "Thank you for subscribing! <a href='https://letter-in-a-bottle.herokuapp.com/welcome/#{r.id}'>Click here to confirm your subscription.</a>"
-    Mailer.send_email(html, 'Welcome to the archipelago!', r.email)
+    html = "<p>Thank you for subscribing to May I Recommend! <a href='https://letter-in-a-bottle.herokuapp.com/welcome/#{r.id}'>Click here to confirm your subscription.</a></p>"
+    Mailer.send_email(html, '🌊 Confirm your subscription to May I Recommend', r.email)
     redirect "/confirm-subscribe?email=#{r.email}"
   end
 
@@ -39,7 +39,7 @@ class MessageInABottle < Sinatra::Base
   get '/welcome/:id' do
     reader = Reader.find(params[:id]) 
     reader.update(status: 'confirmed')
-    erb :welcome
+    erb :welcome, locals: {email: reader.email}
   end
 
   get '/confirm-subscribe' do

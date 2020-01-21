@@ -15,3 +15,11 @@ task :send, [:filename, :subject, :send_type] do |t, args|
   Mailer.send(args[:filename], args[:subject], args[:send_type])
   STDOUT.puts "🍾 Bottle cast! Your letter is bobbing away on the tide. 🌊"
 end
+
+task :clear do
+  Reader.all.each do |reader|
+    if reader.email == ""
+      reader.destroy
+    end
+  end
+end
