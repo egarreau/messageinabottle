@@ -1,5 +1,3 @@
 class Reader < ActiveRecord::Base
-  def self.emails
-    Reader.pluck('email')
-  end
+  validates :email, presence: true
 end
