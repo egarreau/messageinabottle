@@ -3,7 +3,7 @@ class Mailer
   def self.send(filename, subject, send_type)
     html = File.read(filename)
     if send_type == 'send to everyone'
-      progress_bar = ProgressBar.new(Reader.emails.length, :bar, :percentage)
+      progress_bar = ProgressBar.new(Reader.all.length, :bar, :percentage)
       Reader.all.each do |reader|
         if reader.email != "" && reader.date_last_sent != Date.today && reader.status == 'confirmed'
           send_email(html, subject, reader.email)
