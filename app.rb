@@ -17,6 +17,32 @@ class MessageInABottle < Sinatra::Base
     erb :unsubscribe
   end
 
+  get '/archive' do
+    # archive = Archive.new
+    # erb :archive, locals: {archive: archive}
+    "render archive here"
+  end
+
+  get '/archive/:letter' do
+    # letter = something with params[:letter]
+    # erb :letter, locals: {letter: letter}
+    "render letter here"
+  end
+
+  get '/welcome/:id' do
+    reader = Reader.find(params[:id])
+    reader.update(status: 'confirmed')
+    erb :welcome, locals: {email: reader.email}
+  end
+
+  get '/confirm-subscribe' do
+    erb :confirm_subscribe, locals: {email: params[:email]}
+  end
+
+  get '/confirm-unsubscribe' do
+    erb :confirm_unsubscribe, locals: {success: params[:success]}
+  end
+
   post '/create' do
     email = params['email']
     r = Reader.find_or_create_by(email: email)
@@ -34,19 +60,5 @@ class MessageInABottle < Sinatra::Base
       success = true
     end
     redirect "/confirm-unsubscribe?success=#{success}"
-  end
-
-  get '/welcome/:id' do
-    reader = Reader.find(params[:id]) 
-    reader.update(status: 'confirmed')
-    erb :welcome, locals: {email: reader.email}
-  end
-
-  get '/confirm-subscribe' do
-    erb :confirm_subscribe, locals: {email: params[:email]}
-  end
-
-  get '/confirm-unsubscribe' do
-    erb :confirm_unsubscribe, locals: {success: params[:success]}
   end
 end
