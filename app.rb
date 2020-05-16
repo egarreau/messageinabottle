@@ -2,10 +2,6 @@ require_relative 'config/environment'
 
 class MessageInABottle < Sinatra::Base
 
-  get %r{(.*)} do
-    redirect to("http://mayirecommend.email#{params[:captures].first}"), 301
-  end
-
   get '/' do
     redirect '/subscribe'
   end
