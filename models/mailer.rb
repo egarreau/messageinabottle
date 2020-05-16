@@ -1,38 +1,24 @@
 class Mailer
 
-  def self.send(filename, subject, send_type)
-    html = File.read(filename)
-    if send_type == 'send to everyone'
+  def self.send(filename, subject, recipient)
+    bottle = Mailgun::Client.new(ENV['mg_key'])
+    letter = Mailgun::BatchMessage.new(bottle, 'sandbox4d0c6d39160e42b28f5783fa5b756112.mailgun.org')
+    letter.from(ENV['gmail_user'], {'first' => 'Evangeline', 'last' => 'Garreau'})
+    letter.subject(subject)
+    letter.body_html(File.read(filename))
+
+    if recipient == 'send to everyone'
       progress_bar = ProgressBar.new(Reader.all.length, :bar, :percentage)
       Reader.all.each do |reader|
-        if reader.email != "" && reader.date_last_sent != Date.today && reader.status == 'confirmed'
-          send_email(html, subject, reader.email)
-          reader.update(date_last_sent: Date.today)
-          progress_bar.increment!
-        end
+        # if reader.date_last_sent != Date.today && reader.status == 'confirmed'
+        #   letter.add_recipient(:to, reader.email)
+        #   reader.update(date_last_sent: Date.today)
+        #   progress_bar.increment!
+        # end
       end
     else
-      send_email(html, subject, send_type)
+      letter.add_recipient(:to, recipient)
     end
-
-  end
-
-  def self.send_email(html, subject, recipient)
-    Pony.mail({
-      :to => recipient,
-      :from => ENV['gmail_user'],
-      :headers => { "From" => "Evangeline Garreau <#{ENV['gmail_user']}>" },
-      :subject => subject,
-      :html_body => html,
-      :via => :smtp,
-      :via_options => {
-        :address              => 'smtp.gmail.com',
-        :port                 => '587',
-        :user_name            => ENV['gmail_user'],
-        :password             => ENV['gmail_pass'],
-        :authentication       => :plain, 
-        :domain               => "localhost.localdomain" 
-      } 
-    })
+    letter.finalize
   end
 end

@@ -1,7 +1,9 @@
-class Letter
+#aspirational
 
-  def initialize(path)
-    @name
-    @html
-  end
-end
+# class Letter
+
+#   def initialize(path)
+#     @name
+#     @html
+#   end
+# end
