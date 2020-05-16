@@ -3,7 +3,7 @@ require_relative 'config/environment'
 class MessageInABottle < Sinatra::Base
 
   get '/' do
-    redirect to("http://mayirecommend.email/subscribe"), 301
+    redirect to("https://mayirecommend.email/subscribe"), 301
   end
 
   get '/about' do
