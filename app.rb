@@ -1,6 +1,11 @@
 require_relative 'config/environment'
 
 class MessageInABottle < Sinatra::Base
+
+  get %r{(.*)} do
+    redirect to("http://mayirecommend.email#{params[:captures].first}"), 301
+  end
+
   get '/' do
     redirect '/subscribe'
   end
@@ -17,17 +22,17 @@ class MessageInABottle < Sinatra::Base
     erb :unsubscribe
   end
 
-  get '/archive' do
-    # archive = Archive.new
-    # erb :archive, locals: {archive: archive}
-    "render archive here"
-  end
+  # get '/archive' do
+  #   # archive = Archive.new
+  #   # erb :archive, locals: {archive: archive}
+  #   "render archive here"
+  # end
 
-  get '/archive/:letter' do
-    # letter = something with params[:letter]
-    # erb :letter, locals: {letter: letter}
-    "render letter here"
-  end
+  # get '/archive/:letter' do
+  #   # letter = something with params[:letter]
+  #   # erb :letter, locals: {letter: letter}
+  #   "render letter here"
+  # end
 
   get '/welcome/:id' do
     reader = Reader.find(params[:id])
