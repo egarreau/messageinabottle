@@ -10,11 +10,11 @@ class Mailer
     if recipient == 'send to everyone'
       progress_bar = ProgressBar.new(Reader.all.length, :bar, :percentage)
       Reader.all.each do |reader|
-        # if reader.date_last_sent != Date.today && reader.status == 'confirmed'
-        #   letter.add_recipient(:to, reader.email)
-        #   reader.update(date_last_sent: Date.today)
-        #   progress_bar.increment!
-        # end
+        if reader.date_last_sent != Date.today && reader.status == 'confirmed'
+          letter.add_recipient(:to, reader.email)
+          reader.update(date_last_sent: Date.today)
+          progress_bar.increment!
+        end
       end
     else
       letter.add_recipient(:to, recipient)
