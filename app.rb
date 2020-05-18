@@ -30,26 +30,25 @@ class MessageInABottle < Sinatra::Base
   #   "render letter here"
   # end
 
-  get '/welcome/:id' do
-    reader = Reader.find(params[:id])
-    reader.update(status: 'confirmed')
-    erb :welcome, locals: {email: reader.email}
-  end
-
-  get '/confirm-subscribe' do
-    erb :confirm_subscribe, locals: {email: params[:email]}
-  end
-
-  get '/confirm-unsubscribe' do
-    erb :confirm_unsubscribe, locals: {success: params[:success]}
-  end
-
   post '/create' do
     email = params['email']
-    r = Reader.find_or_create_by(email: email)
-    html = "<p>Thank you for subscribing to May I Recommend! <a href='https://letter-in-a-bottle.herokuapp.com/welcome/#{r.id}'>Click here to confirm your subscription.</a></p>"
-    Mailer.send_email(html, '🌊 Confirm your subscription to May I Recommend', r.email)
-    redirect "/confirm-subscribe?email=#{r.email}"
+    reader = Reader.find_or_create_by(email: email)
+    Mailer.request_subscribe(reader)
+    redirect "/subscription-pending?email=#{reader.email}"
+  end
+
+  get '/subscription-pending' do
+    erb :subscription_pending, locals: {email: params[:email]}
+  end
+
+  get '/confirm-subscribe/:id' do
+    reader = Reader.find(params[:id])
+    reader.update(status: 'confirmed')
+    redirect "/welcome?email=#{reader.email}"
+  end
+
+  get '/welcome' do
+    erb :welcome, locals: {email: params[:email]}
   end
 
   post '/delete' do
@@ -61,5 +60,9 @@ class MessageInABottle < Sinatra::Base
       success = true
     end
     redirect "/confirm-unsubscribe?success=#{success}"
+  end
+
+  get '/confirm-unsubscribe' do
+    erb :confirm_unsubscribe, locals: {success: params[:success]}
   end
 end

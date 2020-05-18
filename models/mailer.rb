@@ -1,8 +1,8 @@
 class Mailer
+  BOTTLE = Mailgun::Client.new(ENV['mg_key'])
 
   def self.send(filename, subject, recipient)
-    bottle = Mailgun::Client.new(ENV['mg_key'])
-    letter = Mailgun::BatchMessage.new(bottle, ENV['mg_domain'])
+    letter = Mailgun::BatchMessage.new(BOTTLE, ENV['mg_domain'])
     letter.from(ENV['gmail_user'], {'first' => 'Evangeline', 'last' => 'Garreau'})
     letter.subject(subject)
     letter.body_html(File.read(filename))
@@ -20,5 +20,12 @@ class Mailer
       letter.add_recipient(:to, recipient)
     end
     letter.finalize
+  end
+
+  def self.request_subscribe(reader)
+    BOTTLE.send_message(ENV['mg_domain'], { :from    => ["'Evangeline Garreau' #{ENV['gmail_user']}"],
+                                            :to      => reader.email,
+                                            :subject => '🌊 Confirm your subscription to May I Recommend',
+                                            :html    => "<p>Thank you for subscribing to May I Recommend! <a href='http://mayirecommend.email/confirm-subscribe/#{reader.id}'>Click here to confirm your subscription</a>.</p>" })
   end
 end
