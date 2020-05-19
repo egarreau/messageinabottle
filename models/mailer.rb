@@ -1,12 +1,7 @@
 class Mailer
   BOTTLE = Mailgun::Client.new(ENV['mg_key'])
 
-  def self.send(filename, subject, recipient)
-    letter = Mailgun::BatchMessage.new(BOTTLE, ENV['mg_domain'])
-    letter.from(ENV['gmail_user'], {'first' => 'Evangeline', 'last' => 'Garreau'})
-    letter.subject(subject)
-    letter.body_html(File.read(filename))
-
+  def self.send(letter, recipient)
     if recipient == 'send to everyone'
       progress_bar = ProgressBar.new(Reader.all.length, :bar, :percentage)
       Reader.all.each do |reader|
