@@ -1,20 +1,21 @@
 class Mailer
   BOTTLE = Mailgun::Client.new(ENV['mg_key'])
 
-  def self.send(letter, recipient)
-    if recipient == 'send to everyone'
+  def self.send(letter, scope)
+    if scope == 'send to everyone'
       progress_bar = ProgressBar.new(Reader.all.length, :bar, :percentage)
       Reader.all.each do |reader|
-        if reader.date_last_sent != Date.today && reader.status == 'confirmed'
-          letter.add_recipient(:to, reader.email)
+        # if reader.date_last_sent != Date.today && reader.status == 'confirmed'
+          letter_hash = letter.build(reader.email)
+          BOTTLE.send_message(ENV['mg_domain'], letter_hash)
           reader.update(date_last_sent: Date.today)
           progress_bar.increment!
-        end
+        # end
       end
     else
-      letter.add_recipient(:to, recipient)
+      letter_hash = letter.build(scope)
+      BOTTLE.send_message(ENV['mg_domain'], letter_hash)
     end
-    letter.finalize
   end
 
   def self.request_subscribe(reader)

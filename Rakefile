@@ -11,7 +11,7 @@ task :send, [:filename, :title, :send_type] do |t, args|
     raise "Bottle not cast. You entered #{input} instead of #{confirm_token}" unless input == confirm_token
   end
 
-  letter = Letter.new(args[:title], args[:filename]).build
+  letter = Letter.new(args[:title], args[:filename])
   Mailer.send(letter, args[:send_type])
   STDOUT.puts "🍾 Bottle cast! Your letter is bobbing away on the tide. 🌊"
 end
