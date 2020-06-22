@@ -5,12 +5,12 @@ class Mailer
     if scope == 'send to everyone'
       progress_bar = ProgressBar.new(Reader.all.length, :bar, :percentage)
       Reader.all.each do |reader|
-        # if reader.date_last_sent != Date.today && reader.status == 'confirmed'
+        if reader.date_last_sent != Date.today && reader.status == 'confirmed'
           letter_hash = letter.build(reader.email)
           BOTTLE.send_message(ENV['mg_domain'], letter_hash)
           reader.update(date_last_sent: Date.today)
           progress_bar.increment!
-        # end
+        end
       end
     else
       letter_hash = letter.build(scope)
