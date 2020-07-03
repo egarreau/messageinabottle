@@ -2,7 +2,8 @@ class Letter
 
   def initialize(title, path)
     @subject = "May I Recommend ☞ #{title}"
-    @html = File.read(path)
+    @body = File.read(path)
+    # @yaml = YAML.load_file(path)
   end
 
   def build(recipient)
@@ -10,7 +11,17 @@ class Letter
       :from    => ["'Evangeline Garreau' #{ENV['gmail_user']}"],
       :to      => recipient,
       :subject => @subject,
-      :html    => @html
+      :html    => @body
+    }
+  end
+
+  def build_with_template(recipient)
+    {
+      :from    => ["'Evangeline Garreau' #{ENV['gmail_user']}"],
+      :to      => recipient,
+      :subject => @subject,
+      :template => 'newsletter',
+      ":h:X-Mailgun-Variables" => @body
     }
   end
 
