@@ -1,6 +1,10 @@
 <h1 class="title">Previously Recommended</h1>
 <div class="paragraph">
   <ul>
-    render archive here
+    <% @archive.each do |letter| %>
+      <li>
+        <%= letter.title %>
+      </li>
+    <% end %>
   </ul>
 </div>

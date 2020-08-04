@@ -18,11 +18,11 @@ class MessageInABottle < Sinatra::Base
     erb :unsubscribe
   end
 
-  # get '/archive' do
-  #   # archive = Archive.new
-  #   # erb :archive, locals: {archive: archive}
-  #   "render archive here"
-  # end
+  get '/archive' do
+    archive = Archive.new
+    erb :archive, locals: {archive: archive}
+    "render archive here"
+  end
 
   # get '/archive/:letter' do
   #   # letter = something with params[:letter]
