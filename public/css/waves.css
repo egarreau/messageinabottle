@@ -3,98 +3,118 @@
 * by Evangeline Garreau
 * January 1, 2020
 * Structure shamelessly stolen from Skeleton (www.getskeleton.com)
+* 
+* refreshed August 4, 2020 by Annabeth Carroll to create the Lake Michigan remix 💙 
 */
 
 /* Table of contents
 ––––––––––––––––––––––––––––––––––––––––––––––––––
+* Variables
 * Base Styles
+* Text
 * Header
 * Nav
-* Text
 * Form
 * Misc
 * Media Queries
 */
 
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --fancy-forest: #008094;
+  --steely-dan: #595959;
+  --base-text: #2b2b2b;
+}
+
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 html {
   font-size: 10.5px;
+  font-family: "Rosario", sans-serif;
 }
 
 body {
-  font-family: 'Rosario', sans-serif;
-  font-size: 4.5rem;
-  line-height: 10rem;
+  font-size: 1.5rem;
+  line-height: 3rem;
   text-align: center;
-  color: #2B2B2B;
-}
-
-p {
-  color: #595959;
+  color: var(--base-text);
 }
 
 .container {
   margin: 0 auto;
-  padding: 0 5rem;
+  padding: 0 2rem 2rem 2rem;
 }
 
-h1, h2, h3 {
-  font-family: 'Ibarra Real Nova', serif;
+.paragraph {
+  line-height: 2rem;
+  margin-bottom: 5rem;
+  text-align: left;
 }
 
+/* Text
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1,
+h2,
+h3 {
+  font-family: "Ibarra Real Nova", serif;
+}
+
+p, ul {
+  color: var(--steely-dan);
+}
+
+a {
+  color: var(--fancy-forest);
+  text-decoration: none;
+  font-weight: 900;
+}
 
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .header {
   margin-bottom: 6rem;
-}
-.title {
-  margin: 0; 
-}
-.supertitle {
-  margin-bottom: 0; 
-}
-.subtitle {
-  margin-top: .5rem; 
-}
-.supertitle, .subtitle {
-  font-style: italic; 
+  font-size: 2rem;
+  line-height: 4rem;
 }
 
+.title {
+  margin: 0;
+}
+
+.supertitle {
+  margin-bottom: 0;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+}
+
+.supertitle,
+.subtitle {
+  font-style: italic;
+}
 
 /* Nav
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 nav {
-  padding: 3rem;
+  padding: 2rem;
   margin-bottom: 5rem;
-  border-bottom: .6rem double #008094;
+  border-bottom: 0.6rem double var(--fancy-forest);
 }
 
 .nav-item {
   padding: 0 2rem;
   text-decoration: none;
-  color: #595959;
+  color: var(--steely-dan);
 }
-
-
-/* Text
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.paragraph {
-  text-align: left;
-  line-height: 6rem;
-  margin-bottom: 10rem;
-}
-
-a {
-  color: #008094;
-  text-decoration: none;
-  font-weight: 900;
-}
-
 
 /* Form
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+form {
+  margin: 4rem 6rem 6rem 6rem;
+}
+
 label {
   border: 0;
   clip: rect(0 0 0 0);
@@ -106,38 +126,32 @@ label {
   width: 1px;
 }
 
-input[type="email"], input[type="submit"] {
-  display: block;
-  width: 100%;
-  padding: 2rem;
-  border-radius: .3rem;
-  text-align: center;
-}
-
 input[type="email"] {
-  margin: 3rem 0;
-  border: 1rem solid #008094;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; /* Removes awkward default styles on some inputs for iOS */
+  margin: 1rem 0;
+  border: 1rem solid var(--fancy-forest);
 }
 
 input[type="submit"] {
   border: none;
-  background: #008094;
+  background: var(--fancy-forest);
   color: #fff;
 }
 
-input[type="submit"]:hover,
-input[type="submit"]:focus {}
-input[type="email"]:focus {}
-
-/* Removes awkward default styles on some inputs for iOS */
-input[type="email"] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none; }
+input[type="email"],
+input[type="submit"] {
+  padding: 1rem;
+  display: block;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 0.3rem;
+  text-align: center;
+}
 
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .break {
   display: block;
   text-align: center;
@@ -146,41 +160,13 @@ input[type="email"] {
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Desktop */
-@media (min-width: 990px) {
+@media (min-width: 768px) {
   html {
     font-size: 12px;
   }
-  body { 
-    font-size: 1.5rem; 
-    line-height: 3rem;
-  }
-  .container { 
-    max-width: 700px; 
-  }
 
-  nav {
-    padding: 2rem;
-  }
-
-  .header {
-    font-size: 2rem;
-    line-height: 4rem;
-    margin-bottom: 0;
-  }
-
-  .paragraph {
-    line-height: 2rem;
-    margin-bottom: 5rem;
-  }
-
-  form {
-    margin: 4rem 6rem 6rem 6rem;
-  }
-  input[type="email"] {
-    margin: 1rem 0;
-    border: .5rem solid #008094;
-  }
-  input[type="email"], input[type="submit"] {
-    padding: 1rem;
+  .container {
+    max-width: 700px;
+    padding: 0 5rem 5rem 5rem;
   }
 }
