@@ -19,16 +19,15 @@ class MessageInABottle < Sinatra::Base
   end
 
   get '/archive' do
-    archive = Archive.new
-    erb :archive, locals: {archive: archive}
-    "render archive here"
+    @archive = Archive.new
+    erb :archive, locals: {archive: @archive}
   end
 
-  # get '/archive/:letter' do
-  #   # letter = something with params[:letter]
-  #   # erb :letter, locals: {letter: letter}
-  #   "render letter here"
-  # end
+  get '/archive/:letter' do
+    index = params[:letter].to_i
+    letter = Archive.new.letters[index - 1]
+    erb :letter, locals: {letter: letter}
+  end
 
   post '/create' do
     email = params['email']

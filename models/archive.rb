@@ -9,9 +9,9 @@ class Archive
 
   def build_library
     letters = []
-    Dir.foreach('../letters/inlined')  do |letter|
+    Dir.foreach('letters/inlined')  do |letter|
       if letter != '.' && letter != '..'
-        letters << ArchiveLetter.new("../letters/inlined/#{letter}")
+        letters << ArchiveLetter.new("letters/inlined/#{letter}")
       end
     end
     letters.sort_by { |l| l.title }
@@ -22,7 +22,7 @@ class ArchiveLetter
   attr_reader :title, :html
   def initialize(filename)
     #TODO: make titles prettier
-    @title = filename[19..20]
+    @title = filename[16..17]
     @html = File.read(filename)
   end
 end

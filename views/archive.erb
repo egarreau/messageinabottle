@@ -1,9 +1,9 @@
 <h1 class="title">Previously Recommended</h1>
 <div class="paragraph">
   <ul>
-    <% @archive.each do |letter| %>
+    <% archive.letters.each do |letter| %>
       <li>
-        <%= letter.title %>
+        <a href="/archive/<%= letter.title %>"><%= letter.title %></a>
       </li>
     <% end %>
   </ul>
