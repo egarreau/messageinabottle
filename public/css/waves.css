@@ -17,6 +17,7 @@
 * Form
 * Misc
 * Media Queries
+*    - Note: styles are mobile-first, with desktop overrides found here
 */
 
 /* Variables
@@ -30,7 +31,7 @@
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 html {
-  font-size: 10.5px;
+  font-size: 12px;
   font-family: "Rosario", sans-serif;
 }
 
@@ -48,7 +49,7 @@ body {
 
 .paragraph {
   line-height: 2rem;
-  margin-bottom: 5rem;
+  margin: 5rem 0 5rem 0;
   text-align: left;
 }
 
@@ -101,10 +102,13 @@ nav {
   padding: 2rem;
   margin-bottom: 5rem;
   border-bottom: 0.6rem double var(--fancy-forest);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-item {
-  padding: 0 2rem;
+  padding: 0 1rem;
   text-decoration: none;
   color: var(--steely-dan);
 }
@@ -161,12 +165,14 @@ input[type="submit"] {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Desktop */
 @media (min-width: 768px) {
-  html {
-    font-size: 12px;
-  }
-
   .container {
     max-width: 700px;
     padding: 0 5rem 5rem 5rem;
+  }
+  nav {
+    margin-bottom: 5rem;
+  }
+  .nav-item {
+    padding: 0 3rem;
   }
 }
