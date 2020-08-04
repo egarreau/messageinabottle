@@ -74,7 +74,7 @@ a {
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .header {
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   font-size: 2rem;
   line-height: 4rem;
 }
@@ -100,7 +100,7 @@ a {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 nav {
   padding: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   border-bottom: 0.6rem double var(--fancy-forest);
   display: flex;
   justify-content: center;
@@ -116,7 +116,7 @@ nav {
 /* Form
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 form {
-  margin: 4rem 6rem 6rem 6rem;
+  margin: 0 0 2rem 0;
 }
 
 label {
@@ -170,9 +170,15 @@ input[type="submit"] {
     padding: 0 5rem 5rem 5rem;
   }
   nav {
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
   .nav-item {
     padding: 0 3rem;
+  }
+  .header {
+    margin-bottom: 3rem;
+  }
+  form {
+    margin: 3rem;
   }
 }
