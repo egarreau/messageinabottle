@@ -26,7 +26,7 @@ class ArchiveLetter
 
   def parse(filename)
     page = ::Nokogiri::HTML.parse(File.read(filename))
-    table = page.css('table')[0].to_s
+    table = page.css('table')[1].to_s
     title = page.css('title').text[18..]
 
     return table, title

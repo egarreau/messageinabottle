@@ -5,21 +5,21 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>May I Recommend ☞  Elliptical Running</title>
     <style>
-    /* -------------------------------------
-    Template adapted from https://github.com/leemunroe/responsive-html-email-template
-    Inlined with htmlemail.io/inline
-    ------------------------------------- */
-      /* -------------------------------------
-      Global resets
-      ------------------------------------- */
-      img {
-        border: none;
-        -ms-interpolation-mode: bicubic;
-        max-width: 50%; 
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-      }
+/* -------------------------------------
+   Template adapted from https://github.com/leemunroe/responsive-html-email-template
+   Inlined with htmlemail.io/inline
+   ------------------------------------- */
+/* -------------------------------------
+   Global resets
+   ------------------------------------- */
+img {
+  border: none;
+  -ms-interpolation-mode: bicubic;
+  max-width: 50%; 
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
       body {
         font-family: sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -35,138 +35,138 @@
         mso-table-lspace: 0pt;
         mso-table-rspace: 0pt;
         width: 100%; }
-      table td {
-        font-family: sans-serif;
-        font-size: 16px;
-        vertical-align: top; 
+    table td {
+      font-family: sans-serif;
+      font-size: 16px;
+      vertical-align: top; 
+    }
+    /* -------------------------------------
+       Body & container
+       ------------------------------------- */
+    /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+    .container {
+      display: block;
+      max-width: 580px;
+      padding: 10px;
+      width: 580px; 
+    }
+    /* This should also be a block element, so that it will fill 100% of the .container */
+    .content {
+      box-sizing: border-box;
+      display: block;
+      margin: 0 auto;
+      max-width: 580px;
+      padding: 10px; 
+    }
+    .main {
+      background: #ffffff;
+      width: 100%; 
+    }
+    .wrapper {
+      box-sizing: border-box;
+    }
+    .content-block {
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+
+    /* -------------------------------------
+       Typography
+       ------------------------------------- */
+
+    p, ul, ol {
+      font-family: sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      margin: 0;
+      margin-bottom: 15px; 
+    }
+    a {
+      color: #008094;
+      text-decoration: none; 
+    }
+    h3 {
+      margin-bottom: 5px;
+    }
+    .dingbat {
+      color: #FF6D70;
+      font-size: 25px;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    /* -------------------------------------
+       Responsive and mobile-friendly styles
+       ------------------------------------- */
+    @media only screen and (max-width: 620px) {
+      table[class=body] h1 {
+        font-size: 28px !important;
+        margin-bottom: 10px !important; 
       }
-      /* -------------------------------------
-      Body & container
-      ------------------------------------- */
-      /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
-      .container {
-        display: block;
-        max-width: 580px;
-        padding: 10px;
-        width: 580px; 
+      table[class=body] p,
+      table[class=body] ul,
+      table[class=body] ol,
+      table[class=body] td,
+      table[class=body] span {
+        font-size: 16px !important; 
       }
-      /* This should also be a block element, so that it will fill 100% of the .container */
-      .content {
-        box-sizing: border-box;
-        display: block;
-        margin: 0 auto;
-        max-width: 580px;
-        padding: 10px; 
+      table[class=body] .footer p {
+        font-size: 12px !important;
       }
-      .main {
-        background: #ffffff;
+      table[class=body] .wrapper,
+      table[class=body] .article {
+        padding: 5px !important; 
+      }
+      table[class=body] .content {
+        padding: 0 !important; 
+      }
+      table[class=body] .container {
+        padding: 0 !important;
+        width: 100% !important; 
+      }
+      table[class=body] .main {
+        border-left-width: 0 !important;
+        border-radius: 0 !important;
+        border-right-width: 0 !important; 
+      }
+      table[class=body] .img-responsive {
+        height: auto !important;
+        max-width: 100% !important;
+        width: auto !important; 
+      }
+    }
+    /* -------------------------------------
+       Preserve these styles in the head
+       ------------------------------------- */
+    @media all {
+      .ExternalClass {
         width: 100%; 
       }
-      .wrapper {
-        box-sizing: border-box;
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%; 
       }
-      .content-block {
-        padding-bottom: 10px;
-        padding-top: 10px;
+      .apple-link a {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        text-decoration: none !important; 
       }
-
-      /* -------------------------------------
-      Typography
-      ------------------------------------- */
-
-      p, ul, ol {
-        font-family: sans-serif;
-        font-size: 16px;
-        font-weight: normal;
-        margin: 0;
-        margin-bottom: 15px; 
+      #MessageViewBody a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
       }
-      a {
-        color: #008094;
-        text-decoration: none; 
-      }
-      h3 {
-        margin-bottom: 5px;
-      }
-      .dingbat {
-        color: #FF6D70;
-        font-size: 25px;
-        text-align: center;
-        width: 100%;
-        margin-bottom: 15px;
-      }
-      /* -------------------------------------
-      Responsive and mobile-friendly styles
-      ------------------------------------- */
-      @media only screen and (max-width: 620px) {
-        table[class=body] h1 {
-          font-size: 28px !important;
-          margin-bottom: 10px !important; 
-        }
-        table[class=body] p,
-        table[class=body] ul,
-        table[class=body] ol,
-        table[class=body] td,
-        table[class=body] span {
-          font-size: 16px !important; 
-        }
-        table[class=body] .footer p {
-          font-size: 12px !important;
-        }
-        table[class=body] .wrapper,
-        table[class=body] .article {
-          padding: 5px !important; 
-        }
-        table[class=body] .content {
-          padding: 0 !important; 
-        }
-        table[class=body] .container {
-          padding: 0 !important;
-          width: 100% !important; 
-        }
-        table[class=body] .main {
-          border-left-width: 0 !important;
-          border-radius: 0 !important;
-          border-right-width: 0 !important; 
-        }
-        table[class=body] .img-responsive {
-          height: auto !important;
-          max-width: 100% !important;
-          width: auto !important; 
-        }
-      }
-      /* -------------------------------------
-      Preserve these styles in the head
-      ------------------------------------- */
-      @media all {
-        .ExternalClass {
-          width: 100%; 
-        }
-        .ExternalClass,
-        .ExternalClass p,
-        .ExternalClass span,
-        .ExternalClass font,
-        .ExternalClass td,
-        .ExternalClass div {
-          line-height: 100%; 
-        }
-        .apple-link a {
-          color: inherit !important;
-          font-family: inherit !important;
-          font-size: inherit !important;
-          font-weight: inherit !important;
-          line-height: inherit !important;
-          text-decoration: none !important; 
-        }
-        #MessageViewBody a {
-          color: inherit;
-          text-decoration: none;
-          font-size: inherit;
-          font-family: inherit;
-          font-weight: inherit;
-          line-height: inherit;
-        }
-      }
+    }
 
     </style>
   </head>
@@ -182,7 +182,7 @@
                     <tr>
                       <td>
                         <!-- Header image -->
-                        <a href="http://abacuscorvus.com/whats-new/2019/7/12/july-still-here"><img class="img-responsive" src="https://images.squarespace-cdn.com/content/v1/57589b1f859fd05441edcba8/1562939562045-S7Z0TO9D2L603NJS445Q/ke17ZwdGBToddI8pDm48kA4zXyzqLqp1sTKPRRFVGrhZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxnIKaXUMzeIl20_MEYQ9miwO7RPfLho_Ov9wKSch9-RiVivRNBiLIMFV57iEgV_UE/07+still+here.png" alt="A tardigrade waves a banner that says 'still here'. Illustration by Corina Dross and Jocelyn Mosser"></a>
+                        <a href="http://abacuscorvus.com/whats-new/2019/7/12/july-still-here"><img class="img-responsive" src="https://images.squarespace-cdn.com/content/v1/57589b1f859fd05441edcba8/1562939562045-S7Z0TO9D2L603NJS445Q/ke17ZwdGBToddI8pDm48kA4zXyzqLqp1sTKPRRFVGrhZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxnIKaXUMzeIl20_MEYQ9miwO7RPfLho_Ov9wKSch9-RiVivRNBiLIMFV57iEgV_UE/07+still+here.png" alt="A tardigrade waves a banner that says 'still here'. Illustration by Corina Dross and Jocelyn Mosser" title='"Still Here" by Corina Dross and Jocelyn Mosser'></a>
                       </td>
                     </tr>
                     <tr>
@@ -216,7 +216,7 @@
                     <!-- Begin back matter --> 
                     <tr>
                       <td>
-                        <h3>Pairs well with:</h3>
+                        <h2>Pairs well with:</h2>
                         <ul>
                           <li><strong>App:</strong> <a href="https://aaptiv.app.link/e/ZaJ4WidpW3">Aaptiv</a>. If you too want to listen to a disembodied voice that definitely can’t see you telling you “you make that elliptical look good!!!!” over club bangers, this is one way to do that.</li>
                           <li><strong>Book:</strong> <a href="https://www.indiebound.org/book/9781984845917">Burnout by Emily and Amelia Nagoski</a>. Turns out there’s a bunch of brain science to back up my elliptical feels, and the first chapter of this excellent book breaks it down. It’s written for women but important and helpful for everyone. Fun fact: Emily Nagoski was the wellness director at my college and is one of the people who helped me radically rethink my relationship with my body and its health.</li>
@@ -227,13 +227,13 @@
                     </tr>
                     <tr>
                       <td>
-                        <h3>Book of the week: <a href="https://www.indiebound.org/book/9780316485340">Little Weirds by Jenny Slate</a></h3>
+                        <h2>Book of the week: <a href="https://www.indiebound.org/book/9780316485340">Little Weirds by Jenny Slate</a></h2>
                         <p>What a strange, tender, sparkly, sweet gift Jenny Slate has given us. This book is like if Clickhole were a very sincere woman, or if a poet became a comedian and wrote a book, which I suppose is what happened. I think she is from the same planet as Jonny Sun and Prince. It must be beautiful there.</p>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <h3>Reader recommends:<br><a href="https://www.goodreads.com/series/185644-book-of-the-ancestor">Book of The Ancestor trilogy by Mark Lawrence</a></h3>
+                        <h2>Reader recommends:<br><a href="https://www.goodreads.com/series/185644-book-of-the-ancestor">Book of The Ancestor trilogy by Mark Lawrence</a></h2>
                         <p>“My latest recommendation for anyone looking for an escapist fantasy novel.” —Lauren Hoy</p>
                         <p>Girl you know I always am!</p>
                       </td>
@@ -250,10 +250,6 @@
                         <p>Questions, comments, complaints? Hit reply; I’d love to hear from you. I’m particularly interested in what YOU recommend and why, or an area of your life where you’re looking for recommendations.</p>
 
                         <p><a href="https://letter-in-a-bottle.herokuapp.com/">Subscribe</a>, <a href="https://letter-in-a-bottle.herokuapp.com/unsubscribe">unsubscribe</a>, or <a href="https://letter-in-a-bottle.herokuapp.com/about">learn more</a> on the website.<p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
                         <p>This edition of May I Recommend was written from the strange and overwhelming Starbucks Roastery on Mag Mile in Chicago, Illinois.</p>
                       </td>
                     </tr>

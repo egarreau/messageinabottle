@@ -5,22 +5,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>May I Recommend ☞ Lamplight</title>
     <style>
-    /* -------------------------------------
-    Template adapted from https://github.com/leemunroe/responsive-html-email-template
-    Inlined with htmlemail.io/inline
-    ------------------------------------- */
-      /* -------------------------------------
-      Global resets
-      ------------------------------------- */
-      img {
-        border: none;
-        -ms-interpolation-mode: bicubic;
-        max-width: 50%; 
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-        display: block;
-      }
+/* -------------------------------------
+   Template adapted from https://github.com/leemunroe/responsive-html-email-template
+   Inlined with htmlemail.io/inline
+   ------------------------------------- */
+/* -------------------------------------
+   Global resets
+   ------------------------------------- */
+img {
+  border: none;
+  -ms-interpolation-mode: bicubic;
+  max-width: 50%; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  display: block;
+}
       body {
         font-family: sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -36,138 +36,138 @@
         mso-table-lspace: 0pt;
         mso-table-rspace: 0pt;
         width: 100%; }
-      table td {
-        font-family: sans-serif;
-        font-size: 16px;
-        vertical-align: top; 
+    table td {
+      font-family: sans-serif;
+      font-size: 16px;
+      vertical-align: top; 
+    }
+    /* -------------------------------------
+       Body & container
+       ------------------------------------- */
+    /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+    .container {
+      display: block;
+      max-width: 580px;
+      padding: 10px;
+      width: 580px; 
+    }
+    /* This should also be a block element, so that it will fill 100% of the .container */
+    .content {
+      box-sizing: border-box;
+      display: block;
+      margin: 0 auto;
+      max-width: 580px;
+      padding: 10px; 
+    }
+    .main {
+      background: #ffffff;
+      width: 100%; 
+    }
+    .wrapper {
+      box-sizing: border-box;
+    }
+    .content-block {
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+
+    /* -------------------------------------
+       Typography
+       ------------------------------------- */
+
+    p, ul, ol {
+      font-family: sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      margin: 0;
+      margin-bottom: 15px; 
+    }
+    a {
+      color: #008094;
+      text-decoration: none; 
+    }
+    h3 {
+      margin-bottom: 5px;
+    }
+    .dingbat {
+      color: #FF6D70;
+      font-size: 25px;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    /* -------------------------------------
+       Responsive and mobile-friendly styles
+       ------------------------------------- */
+    @media only screen and (max-width: 620px) {
+      table[class=body] h1 {
+        font-size: 28px !important;
+        margin-bottom: 10px !important; 
       }
-      /* -------------------------------------
-      Body & container
-      ------------------------------------- */
-      /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
-      .container {
-        display: block;
-        max-width: 580px;
-        padding: 10px;
-        width: 580px; 
+      table[class=body] p,
+      table[class=body] ul,
+      table[class=body] ol,
+      table[class=body] td,
+      table[class=body] span {
+        font-size: 16px !important; 
       }
-      /* This should also be a block element, so that it will fill 100% of the .container */
-      .content {
-        box-sizing: border-box;
-        display: block;
-        margin: 0 auto;
-        max-width: 580px;
-        padding: 10px; 
+      table[class=body] .footer p {
+        font-size: 12px !important;
       }
-      .main {
-        background: #ffffff;
+      table[class=body] .wrapper,
+      table[class=body] .article {
+        padding: 5px !important; 
+      }
+      table[class=body] .content {
+        padding: 0 !important; 
+      }
+      table[class=body] .container {
+        padding: 0 !important;
+        width: 100% !important; 
+      }
+      table[class=body] .main {
+        border-left-width: 0 !important;
+        border-radius: 0 !important;
+        border-right-width: 0 !important; 
+      }
+      table[class=body] .img-responsive {
+        height: auto !important;
+        max-width: 100% !important;
+        width: auto !important; 
+      }
+    }
+    /* -------------------------------------
+       Preserve these styles in the head
+       ------------------------------------- */
+    @media all {
+      .ExternalClass {
         width: 100%; 
       }
-      .wrapper {
-        box-sizing: border-box;
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%; 
       }
-      .content-block {
-        padding-bottom: 10px;
-        padding-top: 10px;
+      .apple-link a {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        text-decoration: none !important; 
       }
-
-      /* -------------------------------------
-      Typography
-      ------------------------------------- */
-
-      p, ul, ol {
-        font-family: sans-serif;
-        font-size: 16px;
-        font-weight: normal;
-        margin: 0;
-        margin-bottom: 15px; 
+      #MessageViewBody a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
       }
-      a {
-        color: #008094;
-        text-decoration: none; 
-      }
-      h3 {
-        margin-bottom: 5px;
-      }
-      .dingbat {
-        color: #FF6D70;
-        font-size: 25px;
-        text-align: center;
-        width: 100%;
-        margin-bottom: 15px;
-      }
-      /* -------------------------------------
-      Responsive and mobile-friendly styles
-      ------------------------------------- */
-      @media only screen and (max-width: 620px) {
-        table[class=body] h1 {
-          font-size: 28px !important;
-          margin-bottom: 10px !important; 
-        }
-        table[class=body] p,
-        table[class=body] ul,
-        table[class=body] ol,
-        table[class=body] td,
-        table[class=body] span {
-          font-size: 16px !important; 
-        }
-        table[class=body] .footer p {
-          font-size: 12px !important;
-        }
-        table[class=body] .wrapper,
-        table[class=body] .article {
-          padding: 5px !important; 
-        }
-        table[class=body] .content {
-          padding: 0 !important; 
-        }
-        table[class=body] .container {
-          padding: 0 !important;
-          width: 100% !important; 
-        }
-        table[class=body] .main {
-          border-left-width: 0 !important;
-          border-radius: 0 !important;
-          border-right-width: 0 !important; 
-        }
-        table[class=body] .img-responsive {
-          height: auto !important;
-          max-width: 100% !important;
-          width: auto !important; 
-        }
-      }
-      /* -------------------------------------
-      Preserve these styles in the head
-      ------------------------------------- */
-      @media all {
-        .ExternalClass {
-          width: 100%; 
-        }
-        .ExternalClass,
-        .ExternalClass p,
-        .ExternalClass span,
-        .ExternalClass font,
-        .ExternalClass td,
-        .ExternalClass div {
-          line-height: 100%; 
-        }
-        .apple-link a {
-          color: inherit !important;
-          font-family: inherit !important;
-          font-size: inherit !important;
-          font-weight: inherit !important;
-          line-height: inherit !important;
-          text-decoration: none !important; 
-        }
-        #MessageViewBody a {
-          color: inherit;
-          text-decoration: none;
-          font-size: inherit;
-          font-family: inherit;
-          font-weight: inherit;
-          line-height: inherit;
-        }
-      }
+    }
 
     </style>
   </head>
@@ -183,7 +183,7 @@
                     <tr>
                       <td>
                         <!-- Header image -->
-                        <a href="https://www.clevelandart.org/art/1941.73" alt="The Lamp by Mary Cassatt, from The Cleveland Museum of Art"><img class="img-responsive" src="https://piction.clevelandart.org/cma/ump.di?e=842040819613255D2559AE0716DF1FCC6A30ABD3EDAEFD3ED22AAB974A65018B&s=21&se=335697428&v=3&f=1941.73_o2.jpg" alt="The Lamp by Mary Cassatt, from The Cleveland Museum of Art"></a>
+                        <a href="https://www.clevelandart.org/art/1941.73" alt="The Lamp by Mary Cassatt, from The Cleveland Museum of Art"><img class="img-responsive" src="https://piction.clevelandart.org/cma/ump.di?e=842040819613255D2559AE0716DF1FCC6A30ABD3EDAEFD3ED22AAB974A65018B&s=21&se=335697428&v=3&f=1941.73_o2.jpg" alt="The Lamp by Mary Cassatt, from The Cleveland Museum of Art" title="The Lamp by Mary Cassatt, from The Cleveland Museum of Art"></a>
                       </td>
                     </tr>
                     <tr>
@@ -215,7 +215,7 @@
                     <!-- Begin back matter --> 
                     <tr>
                       <td>
-                        <h3>Pairs well with:</h3>
+                        <h2>Pairs well with:</h2>
                         <ul>
                           <li><strong>Sending yourself flowers</strong>. Support a local florist and brighten your abode with a sweet bouquet. I did this last week and it shocked me what a difference it made to my mood. If you’re in the Chicagoland area, I recommend <a href="https://buncheschicago.com/">Bunches</a>; they have a “designer’s choice” option that is delightful.</li>
                           <li><strong>Lemon water</strong>. Squeeze some lemon in your water. Why not? You deserve it! I always feel like I have my life together when I drink lemon water, even when there is abundant evidence to the contrary.</li>
@@ -227,13 +227,13 @@
                     </tr>
                     <tr>
                       <td>
-                        <h3>Dance of the week: <a href="https://www.youtube.com/watch?v=2cUPYkJQ29s">The Shim Sham</a></h3>
+                        <h2>Dance of the week: <a href="https://www.youtube.com/watch?v=2cUPYkJQ29s">The Shim Sham</a></h2>
                         <p>The Shim Sham is a line dance for swing dancers, typically performed to the song T’ain’t What You Do (It’s The Way That You Do It) by Jimmie Lunceford, a must-play at any swing dance event. It’s very fun to dance and 95% of people look incredibly dumb doing it, which is part of the reason I love it. Last week a friend asked me to teach it to her over facetime and we had such a blast. If you need an excuse to wiggle your body and a distraction from, you know, [gestures wildly], I highly recommend <a href="https://www.youtube.com/watch?v=xO3oGgZEZ5g">giving it a try</a> (or ask me to teach it to you over facetime! Note: I am a bad teacher). Alternatively, <a href="https://www.youtube.com/watch?v=gyThg03OIp8">learn a TikTok dance</a> because why not (a different friend taught me this one on a different video call last week and it was also extremely fun).</p>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <h3>Reader recommends: <a href="https://en.wikipedia.org/wiki/Below_Deck_Mediterranean">Below Deck Mediterranean</a></h3>
+                        <h2>Reader recommends: <a href="https://en.wikipedia.org/wiki/Below_Deck_Mediterranean">Below Deck Mediterranean</a></h2>
                         <p>“It’s chaotic good.” -Anya Navidi-Kasmai</p>
                         <p>This is the kind of gentle trash I am most here for these days. I’ve only ever watched this show in hotel rooms but it gives me the same pleasure I get from listening to my friends gossip about their coworkers that I’ve never met.</p>
                       </td>
@@ -250,10 +250,6 @@
                         <p>Got a recommendation of your own? Hit reply; I’d love to hear from you.</p>
 
                         <p><a href="https://letter-in-a-bottle.herokuapp.com/">Subscribe</a>, <a href="https://letter-in-a-bottle.herokuapp.com/unsubscribe">unsubscribe</a>, or <a href="https://letter-in-a-bottle.herokuapp.com/about">learn more</a> on the website.<p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
                         <p>This surprise Monday edition of May I Recommend was written from a beautifully lit apartment in Chicago, Illinois.</p>
                         <p>We made it through this whole newsletter without an Anchorman reference. Good job, team.</p>
                       </td>

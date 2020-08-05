@@ -18,6 +18,7 @@
 * Misc
 * Media Queries
 *    - Note: styles are mobile-first, with desktop overrides found here
+* Archive-specific Styles
 */
 
 /* Variables
@@ -161,6 +162,19 @@ input[type="submit"] {
   text-align: center;
 }
 
+button {
+  border: none;
+  background-color: var(--fancy-forest);
+  border-radius: 0.3rem;
+  padding: .5rem 1.5rem;
+  margin-right: 1rem;
+}
+
+button a {
+  color: #fff;
+  font-weight: normal;
+}
+
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Desktop */
@@ -181,4 +195,40 @@ input[type="submit"] {
   form {
     margin: 3rem;
   }
+}
+
+/* Archive-specific Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+img {
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+table {
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+table h2 {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.dingbat {
+  color: #FF6D70;
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+ul.archive {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.archive li {
+  padding: .5rem;
 }

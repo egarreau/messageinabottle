@@ -5,22 +5,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>May I Recommend ☞ Lists</title>
     <style>
-    /* -------------------------------------
-    Template adapted from https://github.com/leemunroe/responsive-html-email-template
-    Inlined with htmlemail.io/inline
-    ------------------------------------- */
-      /* -------------------------------------
-      Global resets
-      ------------------------------------- */
-      img {
-        border: none;
-        -ms-interpolation-mode: bicubic;
-        max-width: 80%; 
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-        display: block;
-      }
+/* -------------------------------------
+   Template adapted from https://github.com/leemunroe/responsive-html-email-template
+   Inlined with htmlemail.io/inline
+   ------------------------------------- */
+/* -------------------------------------
+   Global resets
+   ------------------------------------- */
+img {
+  border: none;
+  -ms-interpolation-mode: bicubic;
+  max-width: 80%; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  display: block;
+}
       body {
         font-family: sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -36,138 +36,138 @@
         mso-table-lspace: 0pt;
         mso-table-rspace: 0pt;
         width: 100%; }
-      table td {
-        font-family: sans-serif;
-        font-size: 16px;
-        vertical-align: top; 
+    table td {
+      font-family: sans-serif;
+      font-size: 16px;
+      vertical-align: top; 
+    }
+    /* -------------------------------------
+       Body & container
+       ------------------------------------- */
+    /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+    .container {
+      display: block;
+      max-width: 580px;
+      padding: 10px;
+      width: 580px; 
+    }
+    /* This should also be a block element, so that it will fill 100% of the .container */
+    .content {
+      box-sizing: border-box;
+      display: block;
+      margin: 0 auto;
+      max-width: 580px;
+      padding: 10px; 
+    }
+    .main {
+      background: #ffffff;
+      width: 100%; 
+    }
+    .wrapper {
+      box-sizing: border-box;
+    }
+    .content-block {
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+
+    /* -------------------------------------
+       Typography
+       ------------------------------------- */
+
+    p, ul, ol {
+      font-family: sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      margin: 0;
+      margin-bottom: 15px; 
+    }
+    a {
+      color: #008094;
+      text-decoration: none; 
+    }
+    h3 {
+      margin-bottom: 5px;
+    }
+    .dingbat {
+      color: #FF6D70;
+      font-size: 25px;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    /* -------------------------------------
+       Responsive and mobile-friendly styles
+       ------------------------------------- */
+    @media only screen and (max-width: 620px) {
+      table[class=body] h1 {
+        font-size: 28px !important;
+        margin-bottom: 10px !important; 
       }
-      /* -------------------------------------
-      Body & container
-      ------------------------------------- */
-      /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
-      .container {
-        display: block;
-        max-width: 580px;
-        padding: 10px;
-        width: 580px; 
+      table[class=body] p,
+      table[class=body] ul,
+      table[class=body] ol,
+      table[class=body] td,
+      table[class=body] span {
+        font-size: 16px !important; 
       }
-      /* This should also be a block element, so that it will fill 100% of the .container */
-      .content {
-        box-sizing: border-box;
-        display: block;
-        margin: 0 auto;
-        max-width: 580px;
-        padding: 10px; 
+      table[class=body] .footer p {
+        font-size: 12px !important;
       }
-      .main {
-        background: #ffffff;
+      table[class=body] .wrapper,
+      table[class=body] .article {
+        padding: 5px !important; 
+      }
+      table[class=body] .content {
+        padding: 0 !important; 
+      }
+      table[class=body] .container {
+        padding: 0 !important;
+        width: 100% !important; 
+      }
+      table[class=body] .main {
+        border-left-width: 0 !important;
+        border-radius: 0 !important;
+        border-right-width: 0 !important; 
+      }
+      table[class=body] .img-responsive {
+        height: auto !important;
+        max-width: 100% !important;
+        width: auto !important; 
+      }
+    }
+    /* -------------------------------------
+       Preserve these styles in the head
+       ------------------------------------- */
+    @media all {
+      .ExternalClass {
         width: 100%; 
       }
-      .wrapper {
-        box-sizing: border-box;
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%; 
       }
-      .content-block {
-        padding-bottom: 10px;
-        padding-top: 10px;
+      .apple-link a {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        text-decoration: none !important; 
       }
-
-      /* -------------------------------------
-      Typography
-      ------------------------------------- */
-
-      p, ul, ol {
-        font-family: sans-serif;
-        font-size: 16px;
-        font-weight: normal;
-        margin: 0;
-        margin-bottom: 15px; 
+      #MessageViewBody a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
       }
-      a {
-        color: #008094;
-        text-decoration: none; 
-      }
-      h3 {
-        margin-bottom: 5px;
-      }
-      .dingbat {
-        color: #FF6D70;
-        font-size: 25px;
-        text-align: center;
-        width: 100%;
-        margin-bottom: 15px;
-      }
-      /* -------------------------------------
-      Responsive and mobile-friendly styles
-      ------------------------------------- */
-      @media only screen and (max-width: 620px) {
-        table[class=body] h1 {
-          font-size: 28px !important;
-          margin-bottom: 10px !important; 
-        }
-        table[class=body] p,
-        table[class=body] ul,
-        table[class=body] ol,
-        table[class=body] td,
-        table[class=body] span {
-          font-size: 16px !important; 
-        }
-        table[class=body] .footer p {
-          font-size: 12px !important;
-        }
-        table[class=body] .wrapper,
-        table[class=body] .article {
-          padding: 5px !important; 
-        }
-        table[class=body] .content {
-          padding: 0 !important; 
-        }
-        table[class=body] .container {
-          padding: 0 !important;
-          width: 100% !important; 
-        }
-        table[class=body] .main {
-          border-left-width: 0 !important;
-          border-radius: 0 !important;
-          border-right-width: 0 !important; 
-        }
-        table[class=body] .img-responsive {
-          height: auto !important;
-          max-width: 100% !important;
-          width: auto !important; 
-        }
-      }
-      /* -------------------------------------
-      Preserve these styles in the head
-      ------------------------------------- */
-      @media all {
-        .ExternalClass {
-          width: 100%; 
-        }
-        .ExternalClass,
-        .ExternalClass p,
-        .ExternalClass span,
-        .ExternalClass font,
-        .ExternalClass td,
-        .ExternalClass div {
-          line-height: 100%; 
-        }
-        .apple-link a {
-          color: inherit !important;
-          font-family: inherit !important;
-          font-size: inherit !important;
-          font-weight: inherit !important;
-          line-height: inherit !important;
-          text-decoration: none !important; 
-        }
-        #MessageViewBody a {
-          color: inherit;
-          text-decoration: none;
-          font-size: inherit;
-          font-family: inherit;
-          font-weight: inherit;
-          line-height: inherit;
-        }
-      }
+    }
 
     </style>
   </head>
@@ -188,7 +188,7 @@
                           <li>The brightly painted cornice on the building at 304 West Evergreen</li>
                           <li>The feeling of pressing a hot mug of tea against my face</li>
                           <li>Ordering a book without knowing anything about it just because I love the author and then reading the synopsis and thinking “wow that sounds so good!”</li>
-                          <ul><li><a href="https://www.hachettebookgroup.com/titles/n-k-jemisin/the-city-we-became/9780316509855/">See: The City We Became by NK Jemisin</a></li></ul>
+                          <ul><li>See: <a href="https://www.hachettebookgroup.com/titles/n-k-jemisin/the-city-we-became/9780316509855/">The City We Became by NK Jemisin</a></li></ul>
                           <li>When someone uses an emoji so often, particularly in Slack reactions, that it becomes “theirs”</li>
                           <ul><li>Related: the odd, specific things you learn about coworkers just from spending so much time with them, like how Zach Breakstone always scooped out the inside of the baguette roll that came with the meatball lunch he got every day from the Italian place in the mall</li></ul>
                           <li>The blooming redbud outside my window, some cousin of the blooming redbud outside my dad’s home office window. We compare redbuds every time we talk</li>
@@ -200,7 +200,7 @@
                               <li><a href="https://thememorypalace.us/2012/03/distance/">Distance, The Memory Palace</a></li>
                               <li><a href="https://99percentinvisible.org/episode/this-is-chance-redux/">This Is Chance, 99% Invisible</a></li></ul></ul>
                           <li>A song I think of every time I have a song stuck in my head and want to get it out. I’ve never once gotten it stuck in my head so it’s become like a mental reset button. It has served this purpose so long that I now think of it when I want to stop a line of thinking, like a painful or embarrassing memory or an anxiety spiral</li>
-                          <ul><li><a href="https://www.youtube.com/watch?v=xPTJwOLIWyw">See: Bandits by Josh Ritter</a></li></ul>
+                          <ul><li>See: <a href="https://www.youtube.com/watch?v=xPTJwOLIWyw">Bandits by Josh Ritter</a></li></ul>
                           <li>The feeling of putting on earrings with cool hands</li>
                           <li>Stretching. God it’s so good. I know we talk a lot about how stretching is good, but I don’t think we talk about it enough</li>
                           <li>My weekly breakfast burrito and coconut shake from the diner around the corner from my apartment (they didn’t make me spell my name when I called in my order today, so I think we’re well on our way to “the usual” status, which I’ve never had at any restaurant and delights me to think of)</li>
@@ -222,9 +222,9 @@
                     <!-- Begin back matter --> 
                     <tr>
                       <td>
-                        <h3>Reader recommends: <a href="https://en.wikipedia.org/wiki/Detectorists">Detectorists</a> and <a href="https://en.wikipedia.org/wiki/The_Young_Offenders_(TV_series)">The Young Offenders</a></h3>
+                        <h2>Reader recommends: <a href="https://en.wikipedia.org/wiki/Detectorists">Detectorists</a> and <a href="https://en.wikipedia.org/wiki/The_Young_Offenders_(TV_series)">The Young Offenders</a></h2>
                         <p>"Really any description of Detectorists will make you think that watching paint dry would be more fun, but it's a charming, carefully observed gem of slow-paced comedy. And if you can deal with some (very) thick Cork accents, The Young Offenders is similarly great. Maybe try the movie first if it's easily available to you. It's hard to do good comedy about the lives of young working-class delinquents, but this is perfect.
-                        
+
                         What both of these have in common is a sense of warm-hearted optimism and a complete lack of cynicism or irony in treating these people as actual people and not just the butt of lazy jokes." —Michael Ashbridge</p>
                         <p>"Warm-hearted optimism" is maybe the most ideal descriptor of the genre of TV and movies that I gravitate toward so this is extremely on-brand for me. I loved the first few episodes of Detectorists and I'm excited to brave the Cork accents to check out Young Offenders!</p>
                       </td>
@@ -241,10 +241,6 @@
                         <p>Got a recommendation of your own? Hit reply; I’d love to hear from you.</p>
 
                         <p><a href="https://letter-in-a-bottle.herokuapp.com/">Subscribe</a>, <a href="https://letter-in-a-bottle.herokuapp.com/unsubscribe">unsubscribe</a>, or <a href="https://letter-in-a-bottle.herokuapp.com/about">learn more</a> on the website.<p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
                         <p>This edition of May I Recommend was written from an apartment strewn with craft supplies and half-finished projects in Chicago, Illinois.</p>
                       </td>
                     </tr>
