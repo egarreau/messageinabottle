@@ -1,10 +1,9 @@
-<h1 class="title">Previously Recommended</h1>
-<div class="paragraph">
-  <ul>
-    <% archive.letters.each do |letter| %>
-      <li>
-        <a href="/archive/<%= letter.title %>"><%= letter.title %></a>
-      </li>
-    <% end %>
-  </ul>
-</div>
+<h1 class="title">☞&nbsp;Previously Recommended&nbsp;☜</h1>
+<div class="dingbat">❧ ❧ ❧</div>
+<ul class="archive">
+  <% @archive.letters.each do |letter| %>
+    <li>
+      <a href="/archive/<%= letter.index %>"><%= letter.title %></a>
+    </li>
+  <% end %>
+</ul>

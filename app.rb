@@ -19,13 +19,13 @@ class MessageInABottle < Sinatra::Base
   end
 
   get '/archive' do
-    @archive = Archive.new
-    erb :archive, locals: {archive: @archive}
+    @archive = ARCHIVE
+    erb :archive
   end
 
   get '/archive/:letter' do
     index = params[:letter].to_i
-    letter = Archive.new.letters[index - 1]
+    letter = ARCHIVE.letters[index]
     erb :letter, locals: {letter: letter}
   end
 

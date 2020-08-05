@@ -5,22 +5,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>May I Recommend ☞ Birthdays</title>
     <style>
-    /* -------------------------------------
-    Template adapted from https://github.com/leemunroe/responsive-html-email-template
-    Inlined with htmlemail.io/inline
-    ------------------------------------- */
-      /* -------------------------------------
-      Global resets
-      ------------------------------------- */
-      img {
-        border: none;
-        -ms-interpolation-mode: bicubic;
-        max-width: 80%; 
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-        display: block;
-      }
+/* -------------------------------------
+   Template adapted from https://github.com/leemunroe/responsive-html-email-template
+   Inlined with htmlemail.io/inline
+   ------------------------------------- */
+/* -------------------------------------
+   Global resets
+   ------------------------------------- */
+img {
+  border: none;
+  -ms-interpolation-mode: bicubic;
+  max-width: 80%; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  display: block;
+}
       body {
         font-family: sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -36,139 +36,139 @@
         mso-table-lspace: 0pt;
         mso-table-rspace: 0pt;
         width: 100%; }
-      table td {
-        font-family: sans-serif;
-        font-size: 16px;
-        vertical-align: top; 
+    table td {
+      font-family: sans-serif;
+      font-size: 16px;
+      vertical-align: top; 
+    }
+    /* -------------------------------------
+       Body & container
+       ------------------------------------- */
+    /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+    .container {
+      display: block;
+      max-width: 580px;
+      padding: 10px;
+      width: 580px; 
+    }
+    /* This should also be a block element, so that it will fill 100% of the .container */
+    .content {
+      box-sizing: border-box;
+      display: block;
+      margin: 0 auto;
+      max-width: 580px;
+      padding: 10px; 
+    }
+    .main {
+      background: #ffffff;
+      width: 100%; 
+    }
+    .wrapper {
+      box-sizing: border-box;
+    }
+    .content-block {
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+
+    /* -------------------------------------
+       Typography
+       ------------------------------------- */
+
+    p, ul, ol {
+      font-family: sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      margin: 0;
+      margin-bottom: 15px; 
+    }
+    a {
+      color: #008094;
+      text-decoration: none; 
+    }
+    h2 {
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+    .dingbat {
+      color: #FF6D70;
+      font-size: 25px;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    /* -------------------------------------
+       Responsive and mobile-friendly styles
+       ------------------------------------- */
+    @media only screen and (max-width: 620px) {
+      table[class=body] h1 {
+        font-size: 28px !important;
+        margin-bottom: 10px !important; 
       }
-      /* -------------------------------------
-      Body & container
-      ------------------------------------- */
-      /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
-      .container {
-        display: block;
-        max-width: 580px;
-        padding: 10px;
-        width: 580px; 
+      table[class=body] p,
+      table[class=body] ul,
+      table[class=body] ol,
+      table[class=body] td,
+      table[class=body] span {
+        font-size: 16px !important; 
       }
-      /* This should also be a block element, so that it will fill 100% of the .container */
-      .content {
-        box-sizing: border-box;
-        display: block;
-        margin: 0 auto;
-        max-width: 580px;
-        padding: 10px; 
+      table[class=body] .footer p {
+        font-size: 12px !important;
       }
-      .main {
-        background: #ffffff;
+      table[class=body] .wrapper,
+      table[class=body] .article {
+        padding: 5px !important; 
+      }
+      table[class=body] .content {
+        padding: 0 !important; 
+      }
+      table[class=body] .container {
+        padding: 0 !important;
+        width: 100% !important; 
+      }
+      table[class=body] .main {
+        border-left-width: 0 !important;
+        border-radius: 0 !important;
+        border-right-width: 0 !important; 
+      }
+      table[class=body] .img-responsive {
+        height: auto !important;
+        max-width: 100% !important;
+        width: auto !important; 
+      }
+    }
+    /* -------------------------------------
+       Preserve these styles in the head
+       ------------------------------------- */
+    @media all {
+      .ExternalClass {
         width: 100%; 
       }
-      .wrapper {
-        box-sizing: border-box;
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%; 
       }
-      .content-block {
-        padding-bottom: 10px;
-        padding-top: 10px;
+      .apple-link a {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        text-decoration: none !important; 
       }
-
-      /* -------------------------------------
-      Typography
-      ------------------------------------- */
-
-      p, ul, ol {
-        font-family: sans-serif;
-        font-size: 16px;
-        font-weight: normal;
-        margin: 0;
-        margin-bottom: 15px; 
+      #MessageViewBody a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
       }
-      a {
-        color: #008094;
-        text-decoration: none; 
-      }
-      h2 {
-				font-size: 1.2em;
-        margin-bottom: 5px;
-      }
-      .dingbat {
-        color: #FF6D70;
-        font-size: 25px;
-        text-align: center;
-        width: 100%;
-        margin-bottom: 15px;
-      }
-      /* -------------------------------------
-      Responsive and mobile-friendly styles
-      ------------------------------------- */
-      @media only screen and (max-width: 620px) {
-        table[class=body] h1 {
-          font-size: 28px !important;
-          margin-bottom: 10px !important; 
-        }
-        table[class=body] p,
-        table[class=body] ul,
-        table[class=body] ol,
-        table[class=body] td,
-        table[class=body] span {
-          font-size: 16px !important; 
-        }
-        table[class=body] .footer p {
-          font-size: 12px !important;
-        }
-        table[class=body] .wrapper,
-        table[class=body] .article {
-          padding: 5px !important; 
-        }
-        table[class=body] .content {
-          padding: 0 !important; 
-        }
-        table[class=body] .container {
-          padding: 0 !important;
-          width: 100% !important; 
-        }
-        table[class=body] .main {
-          border-left-width: 0 !important;
-          border-radius: 0 !important;
-          border-right-width: 0 !important; 
-        }
-        table[class=body] .img-responsive {
-          height: auto !important;
-          max-width: 100% !important;
-          width: auto !important; 
-        }
-      }
-      /* -------------------------------------
-      Preserve these styles in the head
-      ------------------------------------- */
-      @media all {
-        .ExternalClass {
-          width: 100%; 
-        }
-        .ExternalClass,
-        .ExternalClass p,
-        .ExternalClass span,
-        .ExternalClass font,
-        .ExternalClass td,
-        .ExternalClass div {
-          line-height: 100%; 
-        }
-        .apple-link a {
-          color: inherit !important;
-          font-family: inherit !important;
-          font-size: inherit !important;
-          font-weight: inherit !important;
-          line-height: inherit !important;
-          text-decoration: none !important; 
-        }
-        #MessageViewBody a {
-          color: inherit;
-          text-decoration: none;
-          font-size: inherit;
-          font-family: inherit;
-          font-weight: inherit;
-          line-height: inherit;
-        }
-      }
+    }
 
     </style>
   </head>
@@ -184,7 +184,7 @@
                     <tr>
                       <td>
                         <!-- Header image -->
-                        <a href="https://www.artic.edu/artworks/182716/beauty-salon-birthday-party-evanston-illinois"><img class="img-responsive" src="https://www.artic.edu/iiif/2/b5db4f47-b186-7d16-bbb0-dec1bcc69f6d/full/843,/0/default.jpg" alt="Beauty Salon Birthday Party, Evanston, Illinois"></a>
+                        <a href="https://www.artic.edu/artworks/182716/beauty-salon-birthday-party-evanston-illinois"><img class="img-responsive" src="https://www.artic.edu/iiif/2/b5db4f47-b186-7d16-bbb0-dec1bcc69f6d/full/843,/0/default.jpg" alt='"Beauty Salon Birthday Party, Evanston, Illinois" by Melissa Ann Pinney, from The Art Institute of Chicago' title='"Beauty Salon Birthday Party, Evanston, Illinois" by Melissa Ann Pinney, from The Art Institute of Chicago'></a>
                       </td>
                     </tr>
                     <tr>
@@ -194,17 +194,17 @@
                     </tr>
                     <tr>
                       <td>
-												<!-- Main essay -->
-												<p>I love getting older. I do not particularly enjoy the often-flaring back pain or the click in my knees when I squat down to play with my cat, but I love the way my experience of life keeps changing and deepening. When I was younger, I thought there was a point in life when you became who you would be forevermore, and then you stayed that person more or less until you died. That assumption persisted well into my college years. I remember once telling my mom that I felt like every few months I looked back on who I was a few months ago and marveled at how much I had changed. She said, “Yeah, me too,” and I looked at her aghast. “This doesn’t <em>end?</em>” I was horrified.</p>
+                        <!-- Main essay -->
+                        <p>I love getting older. I do not particularly enjoy the often-flaring back pain or the click in my knees when I squat down to play with my cat, but I love the way my experience of life keeps changing and deepening. When I was younger, I thought there was a point in life when you became who you would be forevermore, and then you stayed that person more or less until you died. That assumption persisted well into my college years. I remember once telling my mom that I felt like every few months I looked back on who I was a few months ago and marveled at how much I had changed. She said, “Yeah, me too,” and I looked at her aghast. “This doesn’t <em>end?</em>” I was horrified.</p>
 
-												<p>I think what I mistook for a leveling off of personality and growth was actually a settling of the swirl of early adulthood. This is what I’m enjoying most about aging right now; I feel like every year the static of Who am I? What do I want? How will I find it? What do I do? gets quieter, and it gets easier to hear my own voice instead. I do still feel like a radically different person from who I was a few months ago, and while I’m tempted to chalk that up to seismic global change, I’m having a hard time remembering the last time I <em>didn’t</em> feel like a radically different person from who I was a few months prior. But that growth doesn’t feel as vertiginous and lurching as it did in my teens and twenties. To answer my own question from years ago, it doesn’t end, but it get easier and more fun.</p>
+                        <p>I think what I mistook for a leveling off of personality and growth was actually a settling of the swirl of early adulthood. This is what I’m enjoying most about aging right now; I feel like every year the static of Who am I? What do I want? How will I find it? What do I do? gets quieter, and it gets easier to hear my own voice instead. I do still feel like a radically different person from who I was a few months ago, and while I’m tempted to chalk that up to seismic global change, I’m having a hard time remembering the last time I <em>didn’t</em> feel like a radically different person from who I was a few months prior. But that growth doesn’t feel as vertiginous and lurching as it did in my teens and twenties. To answer my own question from years ago, it doesn’t end, but it get easier and more fun.</p>
 
-												<p>One thing that becomes more clear to me every year is the absolutely absurd improbability of existence. You’re telling me not only did intelligent life form on earth and then persist for MILLIONS of years despite fundamental design flaws in the species that continually attempts to self-destruct, BUT THEN two people amidst billions found each other and fell in love and created BRAND NEW LIFE, and THEN I made it all the way around the sun THIRTY TIMES despite the fact that a) I barely made it out of infanthood and b) the planet is chockablock full of life-threatening dangers?? Who doesn't want to have a party about that??</p>
+                        <p>One thing that becomes more clear to me every year is the absolutely absurd improbability of existence. You’re telling me not only did intelligent life form on earth and then persist for MILLIONS of years despite fundamental design flaws in the species that continually attempts to self-destruct, BUT THEN two people amidst billions found each other and fell in love and created BRAND NEW LIFE, and THEN I made it all the way around the sun THIRTY TIMES despite the fact that a) I barely made it out of infanthood and b) the planet is chockablock full of life-threatening dangers?? Who doesn't want to have a party about that??</p>
 
-												<p>It makes me sad when people don’t enjoy celebrating their birthday. I understand intellectually that some people don’t like a lot of attention (I can’t relate) but it seems like a bummer to miss out on the chance to celebrate life and existence and let your community love up on you for a day. A good birthday party is like a good wedding: disparate people who might never otherwise meet are brought together by their shared love of a person or people, and they get to spend a few hours celebrating that love together. Is there anything more powerful?</p>
+                        <p>It makes me sad when people don’t enjoy celebrating their birthday. I understand intellectually that some people don’t like a lot of attention (I can’t relate) but it seems like a bummer to miss out on the chance to celebrate life and existence and let your community love up on you for a day. A good birthday party is like a good wedding: disparate people who might never otherwise meet are brought together by their shared love of a person or people, and they get to spend a few hours celebrating that love together. Is there anything more powerful?</p>
 
-												<p>For birthday skeptics my question is, do you dislike yourself or do you dislike joy? Or are you on some next-level zen selflessness that I will never grasp? Whatever the case, I encourage you to reconsider. Your next cake is on me. 🎂</p>
-											</td>
+                        <p>For birthday skeptics my question is, do you dislike yourself or do you dislike joy? Or are you on some next-level zen selflessness that I will never grasp? Whatever the case, I encourage you to reconsider. Your next cake is on me. 🎂</p>
+                      </td>
                     </tr>
                     <!-- End essay section -->
                     <tr>
@@ -215,13 +215,13 @@
                     <!-- Begin back matter --> 
                     <tr>
                       <td>
-												<h2>Pairs well with:</h2>
-												<ul>
-													<li><strong>Tarot card readings</strong>. I love pulling tarot cards for a myriad of reasons and will probably give them their own essay at some point, but it boils down to the fact that a tarot spread is like a very beautiful inkblot test; the meaning you make of it can be profound and useful no matter what you believe about spirituality and the energies of the universe. I did a bunch of tarot readings this week, for myself and others, and it’s such a lovely meditative practice to think through a situation or reflect on a phase of life. You basically get to look at pretty pictures and use them to tell stories about your life, which is an excellent way to spend an afternoon. My favorite decks are <a href="http://www.siolothompsonart.com/linestrider-tarot">Linestrider</a> by Siolo Thompson and <a href="https://littleredtarot.com/product/portable-fortitude-cards/">Portable Fortitude</a> by Corina Dross. I also recommend <a href="https://kaleidadope.com/collections/decks/products/kaleidadope-tarot-a-dope-deck">Kaleidadope Tarot</a> by Krystal Banner as a simple, modern deck that would be welcoming to beginners.</li>
-													<li><strong>Napping</strong>. I took so many good naps this week. Napping is one of my all-time favorite activities, and it feels deliciously luxurious to think about all the things I could be doing and then decide, “Nah, I’m going to take a nap.” Ideally a birthday celebration should be a space in which you treat yourself like a queen, and nothing makes me feel more queenly than sprawling on the couch for a sunny nap in the middle of the day.</li>
-													<li><strong>Edible flowers</strong>. Speaking of queenly, is there anything more royal than adorning one’s food and drinks with edible flowers? One of the most elaborate and memorable birthday parties I’ve had was a garden party in second or third grade in which my mom froze pansies in ice cubes to put in our iced tea. I was utterly enchanted by this back then and I continue to be enchanted by it now. I froze pansies in ice cubes to put in my hibiscus rhubarb cocktail this week, and it was no less magical than it was when I was seven.</li>
-												</ul>
-											</td>
+                        <h2>Pairs well with:</h2>
+                        <ul>
+                          <li><strong>Tarot card readings</strong>. I love pulling tarot cards for a myriad of reasons and will probably give them their own essay at some point, but it boils down to the fact that a tarot spread is like a very beautiful inkblot test; the meaning you make of it can be profound and useful no matter what you believe about spirituality and the energies of the universe. I did a bunch of tarot readings this week, for myself and others, and it’s such a lovely meditative practice to think through a situation or reflect on a phase of life. You basically get to look at pretty pictures and use them to tell stories about your life, which is an excellent way to spend an afternoon. My favorite decks are <a href="http://www.siolothompsonart.com/linestrider-tarot">Linestrider</a> by Siolo Thompson and <a href="https://littleredtarot.com/product/portable-fortitude-cards/">Portable Fortitude</a> by Corina Dross. I also recommend <a href="https://kaleidadope.com/collections/decks/products/kaleidadope-tarot-a-dope-deck">Kaleidadope Tarot</a> by Krystal Banner as a simple, modern deck that would be welcoming to beginners.</li>
+                          <li><strong>Napping</strong>. I took so many good naps this week. Napping is one of my all-time favorite activities, and it feels deliciously luxurious to think about all the things I could be doing and then decide, “Nah, I’m going to take a nap.” Ideally a birthday celebration should be a space in which you treat yourself like a queen, and nothing makes me feel more queenly than sprawling on the couch for a sunny nap in the middle of the day.</li>
+                          <li><strong>Edible flowers</strong>. Speaking of queenly, is there anything more royal than adorning one’s food and drinks with edible flowers? One of the most elaborate and memorable birthday parties I’ve had was a garden party in second or third grade in which my mom froze pansies in ice cubes to put in our iced tea. I was utterly enchanted by this back then and I continue to be enchanted by it now. I froze pansies in ice cubes to put in my hibiscus rhubarb cocktail this week, and it was no less magical than it was when I was seven.</li>
+                        </ul>
+                      </td>
                     </tr>
                     <tr>
                       <td>
@@ -248,10 +248,6 @@
                         <p>Got a recommendation of your own? Hit reply or email mayirec@gmail.com; I’d love to hear from you.</p>
 
                         <p><a href="http://mayirecommend.email/">Subscribe</a>, <a href="http://mayirecommend.email/unsubscribe">unsubscribe</a>, or <a href="http://mayirecommend.email/about">learn more</a> on the website.<p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
                         <p>This edition of May I Recommend was written by a newly-minted thirty year old in Chicago, Illinois.</p>
                       </td>
                     </tr>

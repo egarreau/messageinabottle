@@ -5,22 +5,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>May I Recommend ☞  Sparklets</title>
     <style>
-    /* -------------------------------------
-    Template adapted from https://github.com/leemunroe/responsive-html-email-template
-    Inlined with htmlemail.io/inline
-    ------------------------------------- */
-      /* -------------------------------------
-      Global resets
-      ------------------------------------- */
-      img {
-        border: none;
-        -ms-interpolation-mode: bicubic;
-        max-width: 50%; 
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 50px;
-        display: block;
-      }
+/* -------------------------------------
+   Template adapted from https://github.com/leemunroe/responsive-html-email-template
+   Inlined with htmlemail.io/inline
+   ------------------------------------- */
+/* -------------------------------------
+   Global resets
+   ------------------------------------- */
+img {
+  border: none;
+  -ms-interpolation-mode: bicubic;
+  max-width: 50%; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  display: block;
+}
       body {
         font-family: sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -36,138 +36,138 @@
         mso-table-lspace: 0pt;
         mso-table-rspace: 0pt;
         width: 100%; }
-      table td {
-        font-family: sans-serif;
-        font-size: 16px;
-        vertical-align: top; 
+    table td {
+      font-family: sans-serif;
+      font-size: 16px;
+      vertical-align: top; 
+    }
+    /* -------------------------------------
+       Body & container
+       ------------------------------------- */
+    /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+    .container {
+      display: block;
+      max-width: 580px;
+      padding: 10px;
+      width: 580px; 
+    }
+    /* This should also be a block element, so that it will fill 100% of the .container */
+    .content {
+      box-sizing: border-box;
+      display: block;
+      margin: 0 auto;
+      max-width: 580px;
+      padding: 10px; 
+    }
+    .main {
+      background: #ffffff;
+      width: 100%; 
+    }
+    .wrapper {
+      box-sizing: border-box;
+    }
+    .content-block {
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+
+    /* -------------------------------------
+       Typography
+       ------------------------------------- */
+
+    p, ul, ol {
+      font-family: sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      margin: 0;
+      margin-bottom: 15px; 
+    }
+    a {
+      color: #008094;
+      text-decoration: none; 
+    }
+    h3 {
+      margin-bottom: 5px;
+    }
+    .dingbat {
+      color: #FF6D70;
+      font-size: 25px;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    /* -------------------------------------
+       Responsive and mobile-friendly styles
+       ------------------------------------- */
+    @media only screen and (max-width: 620px) {
+      table[class=body] h1 {
+        font-size: 28px !important;
+        margin-bottom: 10px !important; 
       }
-      /* -------------------------------------
-      Body & container
-      ------------------------------------- */
-      /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
-      .container {
-        display: block;
-        max-width: 580px;
-        padding: 10px;
-        width: 580px; 
+      table[class=body] p,
+      table[class=body] ul,
+      table[class=body] ol,
+      table[class=body] td,
+      table[class=body] span {
+        font-size: 16px !important; 
       }
-      /* This should also be a block element, so that it will fill 100% of the .container */
-      .content {
-        box-sizing: border-box;
-        display: block;
-        margin: 0 auto;
-        max-width: 580px;
-        padding: 10px; 
+      table[class=body] .footer p {
+        font-size: 12px !important;
       }
-      .main {
-        background: #ffffff;
+      table[class=body] .wrapper,
+      table[class=body] .article {
+        padding: 5px !important; 
+      }
+      table[class=body] .content {
+        padding: 0 !important; 
+      }
+      table[class=body] .container {
+        padding: 0 !important;
+        width: 100% !important; 
+      }
+      table[class=body] .main {
+        border-left-width: 0 !important;
+        border-radius: 0 !important;
+        border-right-width: 0 !important; 
+      }
+      table[class=body] .img-responsive {
+        height: auto !important;
+        max-width: 70% !important;
+        width: auto !important; 
+      }
+    }
+    /* -------------------------------------
+       Preserve these styles in the head
+       ------------------------------------- */
+    @media all {
+      .ExternalClass {
         width: 100%; 
       }
-      .wrapper {
-        box-sizing: border-box;
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%; 
       }
-      .content-block {
-        padding-bottom: 10px;
-        padding-top: 10px;
+      .apple-link a {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        text-decoration: none !important; 
       }
-
-      /* -------------------------------------
-      Typography
-      ------------------------------------- */
-
-      p, ul, ol {
-        font-family: sans-serif;
-        font-size: 16px;
-        font-weight: normal;
-        margin: 0;
-        margin-bottom: 15px; 
+      #MessageViewBody a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
       }
-      a {
-        color: #008094;
-        text-decoration: none; 
-      }
-      h3 {
-        margin-bottom: 5px;
-      }
-      .dingbat {
-        color: #FF6D70;
-        font-size: 25px;
-        text-align: center;
-        width: 100%;
-        margin-bottom: 15px;
-      }
-      /* -------------------------------------
-      Responsive and mobile-friendly styles
-      ------------------------------------- */
-      @media only screen and (max-width: 620px) {
-        table[class=body] h1 {
-          font-size: 28px !important;
-          margin-bottom: 10px !important; 
-        }
-        table[class=body] p,
-        table[class=body] ul,
-        table[class=body] ol,
-        table[class=body] td,
-        table[class=body] span {
-          font-size: 16px !important; 
-        }
-        table[class=body] .footer p {
-          font-size: 12px !important;
-        }
-        table[class=body] .wrapper,
-        table[class=body] .article {
-          padding: 5px !important; 
-        }
-        table[class=body] .content {
-          padding: 0 !important; 
-        }
-        table[class=body] .container {
-          padding: 0 !important;
-          width: 100% !important; 
-        }
-        table[class=body] .main {
-          border-left-width: 0 !important;
-          border-radius: 0 !important;
-          border-right-width: 0 !important; 
-        }
-        table[class=body] .img-responsive {
-          height: auto !important;
-          max-width: 70% !important;
-          width: auto !important; 
-        }
-      }
-      /* -------------------------------------
-      Preserve these styles in the head
-      ------------------------------------- */
-      @media all {
-        .ExternalClass {
-          width: 100%; 
-        }
-        .ExternalClass,
-        .ExternalClass p,
-        .ExternalClass span,
-        .ExternalClass font,
-        .ExternalClass td,
-        .ExternalClass div {
-          line-height: 100%; 
-        }
-        .apple-link a {
-          color: inherit !important;
-          font-family: inherit !important;
-          font-size: inherit !important;
-          font-weight: inherit !important;
-          line-height: inherit !important;
-          text-decoration: none !important; 
-        }
-        #MessageViewBody a {
-          color: inherit;
-          text-decoration: none;
-          font-size: inherit;
-          font-family: inherit;
-          font-weight: inherit;
-          line-height: inherit;
-        }
-      }
+    }
 
     </style>
   </head>
@@ -183,32 +183,37 @@
                     <tr>
                       <td>
                         <!-- Header image -->
-                        <a href="https://www.clevelandart.org/art/1963.594.bb"><img class="img-responsive" src="https://piction.clevelandart.org/cma/ump.di?e=1DC47246EDC825FF4E173E9066BC962A0E9B890CF072EAD4F0AC50AAF32859B5&s=21&se=22387798&v=&f=1963.594.bb_o2.jpg" alt="Florilegium: orange fritillaria imperialis (crown imperial)"></a>
+                        <a href="https://www.clevelandart.org/art/1963.594.bb"><img class="img-responsive" src="https://piction.clevelandart.org/cma/ump.di?e=1DC47246EDC825FF4E173E9066BC962A0E9B890CF072EAD4F0AC50AAF32859B5&s=21&se=22387798&v=&f=1963.594.bb_o2.jpg" alt="Florilegium: orange fritillaria imperialis (crown imperial)" title="Florilegium: orange fritillaria imperialis (crown imperial)"></a>
                       </td>
                     </tr>
                     <tr>
                       <td>
-												<p>In medieval times, the time we refer to poetically as the Dark Ages, monks collected bits and pieces of the things they read into collections they called “florilegia.” The word evokes a collection of wildflowers pressed between the pages. This was a sacred practice; sometimes the fragments were from the bible, sometimes they were from religious commentaries or philosophies, but each piece was meaningful to the monk that picked it. My favorite name of one popular florilegium is “The Book of Sparklets.” The reader looked for the sentence that sparkled up out of the reading and captured it, saving its light for later. Once these sparklets have been written down together, they create a new text, sacred in its own way. Set next to one another, these fragments shine in new ways.
+                        <div class="dingbat">❧ ❧ ❧</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>In medieval times, the time we refer to poetically as the Dark Ages, monks collected bits and pieces of the things they read into collections they called “florilegia.” The word evokes a collection of wildflowers pressed between the pages. This was a sacred practice; sometimes the fragments were from the bible, sometimes they were from religious commentaries or philosophies, but each piece was meaningful to the monk that picked it. My favorite name of one popular florilegium is “The Book of Sparklets.” The reader looked for the sentence that sparkled up out of the reading and captured it, saving its light for later. Once these sparklets have been written down together, they create a new text, sacred in its own way. Set next to one another, these fragments shine in new ways.
 
-												<p>We probably all have sparklets we’ve collected throughout our lives from things we’ve read or heard or mused on our own. Some people call them mantras or aphorisms. I think this is one reason quote tattoos are popular; sometimes it feels important to hold a sparklet as close as you can, press it into your skin, to remember its light when you can’t see a way forward.</p>
+                        <p>We probably all have sparklets we’ve collected throughout our lives from things we’ve read or heard or mused on our own. Some people call them mantras or aphorisms. I think this is one reason quote tattoos are popular; sometimes it feels important to hold a sparklet as close as you can, press it into your skin, to remember its light when you can’t see a way forward.</p>
 
-												<p>I’ve been thinking a lot about mine. These are some of the ones I carry with me most often.</p>
+                        <p>I’ve been thinking a lot about mine. These are some of the ones I carry with me most often.</p>
 
-												<ul>
-												<li>“Grief and love are sisters.” Francis Weller, via <a href="https://www.etsy.com/listing/738968384/grief-and-love-giclee-print">Molly Costello</a>, via my therapist</li>
-												<li>“God is change.” Octavia Butler, via <a href="https://www.instagram.com/p/B94kRtwBk1G/">adrienne maree brown</a></li>
-												<li>“Things are not getting worse, they are getting uncovered. We must hold each other tight and continue to pull back the veil.” <a href="http://adriennemareebrown.net/2017/02/03/living-through-the-unveiling/">adrienne maree brown</a></li>
-												<li>“After the A-bomb, specialists said it would take seventy-five years for/the radiation-damaged soil of Hiroshima to ever grow anything again./But that spring, there were new buds popping up from the earth. <a href="https://www.youtube.com/watch?v=AXb9N2cVUs4">Sarah Kay</a></li>
-												<li>“Hope is a gift you don’t have to surrender, a power you don’t have to throw away.” Rebecca Solnit, via <a href="https://twitter.com/sarahmirk/status/1238582070999281664">Sarah Mirk</a></li>
-												<li>“You do not have to be good.” <a href="https://www.brainpickings.org/2014/09/24/mary-oliver-reads-wild-geese/">Mary Oliver</a></li>
-												<li>“People may say I can’t sing, but no one can ever say I didn’t sing.” Florence Foster Jenkins, via <a href="https://www.youtube.com/watch?v=6Txmy4IGOCI">John Green</a></li>
-												</ul>
+                        <ul>
+                          <li>“Grief and love are sisters.” Francis Weller, via <a href="https://www.etsy.com/listing/738968384/grief-and-love-giclee-print">Molly Costello</a>, via my therapist</li>
+                          <li>“God is change.” Octavia Butler, via <a href="https://www.instagram.com/p/B94kRtwBk1G/">adrienne maree brown</a></li>
+                          <li>“Things are not getting worse, they are getting uncovered. We must hold each other tight and continue to pull back the veil.” <a href="http://adriennemareebrown.net/2017/02/03/living-through-the-unveiling/">adrienne maree brown</a></li>
+                          <li>“After the A-bomb, specialists said it would take seventy-five years for/the radiation-damaged soil of Hiroshima to ever grow anything again./But that spring, there were new buds popping up from the earth. <a href="https://www.youtube.com/watch?v=AXb9N2cVUs4">Sarah Kay</a></li>
+                          <li>“Hope is a gift you don’t have to surrender, a power you don’t have to throw away.” Rebecca Solnit, via <a href="https://twitter.com/sarahmirk/status/1238582070999281664">Sarah Mirk</a></li>
+                          <li>“You do not have to be good.” <a href="https://www.brainpickings.org/2014/09/24/mary-oliver-reads-wild-geese/">Mary Oliver</a></li>
+                          <li>“People may say I can’t sing, but no one can ever say I didn’t sing.” Florence Foster Jenkins, via <a href="https://www.youtube.com/watch?v=6Txmy4IGOCI">John Green</a></li>
+                        </ul>
 
-												<p>Sparkling together, they paint a picture of hope and defiance in uncertain, confusing times. I guess that’s all I’m ever chasing after. I see in this list a collection of people (mostly women) I think of as my family, intellectually/creatively. I’ve never met them, but they’ve brought me comfort, light, joy, and connection.</p>
+                        <p>Sparkling together, they paint a picture of hope and defiance in uncertain, confusing times. I guess that’s all I’m ever chasing after. I see in this list a collection of people (mostly women) I think of as my family, intellectually/creatively. I’ve never met them, but they’ve brought me comfort, light, joy, and connection.</p>
 
-												<p>I’m not sure how to end this essay. I’m not sure of a lot of things.</p>
+                        <p>I’m not sure how to end this essay. I’m not sure of a lot of things.</p>
 
-												<p>After my last breakup, the phrase that kept coming to mind (not exactly a sparklet, more like a sharp stone in the rock tumbler of my brain) was <em>I don’t know how to do this</em>. As an avid book-learner and incurable know-it-all, the thought was terrifying. <em>I don’t know how to do this</em>. It came up when I thought about going to bed, or getting up, or feeding myself, or cleaning my apartment. <em>I don’t know how to do this</em>. I thought it so many times that it smoothed into a kind of worry stone, a comforting mantra of its own. I watched myself do the impossible every day. I slept, and I ate, and I cleaned, and I healed. <em>I don’t know how to do this</em>. But I did it anyway.</p>
+                        <p>After my last breakup, the phrase that kept coming to mind (not exactly a sparklet, more like a sharp stone in the rock tumbler of my brain) was <em>I don’t know how to do this</em>. As an avid book-learner and incurable know-it-all, the thought was terrifying. <em>I don’t know how to do this</em>. It came up when I thought about going to bed, or getting up, or feeding myself, or cleaning my apartment. <em>I don’t know how to do this</em>. I thought it so many times that it smoothed into a kind of worry stone, a comforting mantra of its own. I watched myself do the impossible every day. I slept, and I ate, and I cleaned, and I healed. <em>I don’t know how to do this</em>. But I did it anyway.</p>
                       </td>
                     </tr>
                     <!-- End essay section -->
@@ -220,7 +225,7 @@
                     <!-- Begin back matter --> 
                     <tr>
                       <td>
-                        <h3>Pairs well with:</h3>
+                        <h2>Pairs well with:</h2>
                         <ul>
                           <li><strong>Podcast episode:</strong> <a href="https://www.stitcher.com/podcast/harry-potter-and-the-sacred-text/e/love-dobbys-reward-book-2-chapter-18-49207034">Love: Dobby’s Reward (Book 2, Chapter 18)</a> from <em>Harry Potter and the Sacred Text</em>. Regardless of your opinion of Harry Potter, this podcast (in which two Harvard divinity masters study the Harry Potter series as though it were a sacred text, in the tradition of the Bible, Torah, Quran, etc) is a deeply affecting piece of art about spirituality and the human experience. Yes, it is a bit silly, but it is also respectful, nuanced, imaginative, big-hearted, and eye-opening. This particular episode introduced me to the practice of florilegia and sparklets.</li>
                           <li><strong>Essay collection:</strong> <a href="https://www.indiebound.org/book/9781616207922">The Book of Delights by Ross Gay</a>. This is its own sort of florilegium, and it feels vital to me right now. Ross Gay challenged himself to write a short essay about something he finds delightful every day for a year, from August 2016 to August 2017. I love how clear-eyed this book is about delight and heartbreak living side by side, not negating or eclipsing one another but dancing together. Love and grief are sisters.</li>
@@ -230,34 +235,34 @@
                     </tr>
                     <tr>
                       <td>
-                        <h3>Lockdown joys of the week:</h3>
+                        <h2>Lockdown joys of the week:</h2>
                         <ul>
-													<li><strong>Bright, comfy dresses</strong>. I have been working remote full-time for two years, so I already knew the psychological advantages of getting dressed for work, but I also knew that I will never motivate myself to wear anything less comfortable than pajamas when I am alone in my own home. Solution? Jersey dresses! This week I completely forgot all my best work-from-home habits and wore only gray leggings and pajamas for four days, but when I finally decided to pull out my <a href="https://www2.hm.com/en_us/productpage.0825550003.html">brightest, comfiest dress</a> (with leggings underneath) it felt like someone had turned a light on in my chest. I decided to go whole-hog and put on earrings too, and I got a thousand compliments in my video meetings because everyone feels like a gray blob. It turned my whole day around!
-														<ul>
-															<li>Non-femmes: have you ever been curious about this chic pants-free lifestyle? (If not, maybe you should!) Now is the time to try a dress! Gender is fake and no one can see you! Some fun places to start: <a href="https://www.amazon.com/JollieLovin-Womens-Pockets-T-Shirt-Black/dp/B078X7337Y">t-shirt dress</a>? <a href="https://www2.hm.com/en_us/productpage.0874547003.html">Kaftan dress</a>? <a href="https://www2.hm.com/en_us/productpage.0771829003.html">Sweater dress</a>?? (imagine how cozy!)</li>
-															<li>See also: <a href="https://www.macys.com/shop/product/alfani-button-detail-wide-leg-pull-on-pants-created-for-macys?ID=10492426">palazzo pants</a></li>
-														</ul>
-													</li>
+                          <li><strong>Bright, comfy dresses</strong>. I have been working remote full-time for two years, so I already knew the psychological advantages of getting dressed for work, but I also knew that I will never motivate myself to wear anything less comfortable than pajamas when I am alone in my own home. Solution? Jersey dresses! This week I completely forgot all my best work-from-home habits and wore only gray leggings and pajamas for four days, but when I finally decided to pull out my <a href="https://www2.hm.com/en_us/productpage.0825550003.html">brightest, comfiest dress</a> (with leggings underneath) it felt like someone had turned a light on in my chest. I decided to go whole-hog and put on earrings too, and I got a thousand compliments in my video meetings because everyone feels like a gray blob. It turned my whole day around!
+                            <ul>
+                              <li>Non-femmes: have you ever been curious about this chic pants-free lifestyle? (If not, maybe you should!) Now is the time to try a dress! Gender is fake and no one can see you! Some fun places to start: <a href="https://www.amazon.com/JollieLovin-Womens-Pockets-T-Shirt-Black/dp/B078X7337Y">t-shirt dress</a>? <a href="https://www2.hm.com/en_us/productpage.0874547003.html">Kaftan dress</a>? <a href="https://www2.hm.com/en_us/productpage.0771829003.html">Sweater dress</a>?? (imagine how cozy!)</li>
+                              <li>See also: <a href="https://www.macys.com/shop/product/alfani-button-detail-wide-leg-pull-on-pants-created-for-macys?ID=10492426">palazzo pants</a></li>
+                            </ul>
+                          </li>
                           <li><strong>Remote personal training</strong>. Even with all the newly free exercise resources available, I couldn’t motivate myself to work up a sweat until I set up a facetime session with my beloved trainer, Daniella Pereira. As connection-starved as I’m feeling right now, it made a huge difference to have a live person telling me what to do instead of a video. And if you’re new to exercise, or if you’re trying something new during lockdown, it’s helpful to have someone checking your form and correcting you so you don’t hurt yourself. Dani does 30-minute facetime sessions for $25, designed specifically for your goals and needs. Reach out to her at daniellampereira@gmail.com if you’re interested!
                             <ul>
                               <li>Alternatively, if you want a kind Matt Damon lookalike to work you out, my wonderful cousin-in-law Craig Wheeler is offering hour-long remote sessions for $75 (half-hour = $45). Find him at athletictrainer9@gmail.com</li>
                             </ul>
                           </li>
                           <li><strong>Long-distance board games</strong>. A friend whom I mostly know through the internet invited me to play Diplomacy with a group of people I’ve never met and I’m having a blast. <a href="https://www.backstabbr.com/">The site we’re using</a> is simple and effective, and the game is mostly played through emails of dubious trustworthiness. England and Russia both read this newsletter so I won’t be revealing my grand French strategy, but trust that it involves much mustache twirling.</li>
-												</ul>
+                        </ul>
                         <p>What’s bringing you joy? What are your sparklets? I need your emails now more than ever before! I love hearing about your loves.</a>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <h3>Reader recommends: <a href="https://onbeing.org/programs/a-poem-for-what-you-learn-alone/">A Poem for What You Learn Alone</a>, from <a href="https://onbeing.org/series/poetry-unbound/">Poetry Unbound</a></h3>
+                        <h2>Reader recommends: <a href="https://onbeing.org/programs/a-poem-for-what-you-learn-alone/">A Poem for What You Learn Alone</a>, from <a href="https://onbeing.org/series/poetry-unbound/">Poetry Unbound</a></h2>
                         <p>In response to my letter on poetry, Lizzie Cooke wrote, “My favorite recently discovered poem is ‘What You Missed That Day You Were Absent from Fourth Grade’ by Brad Aaron Modlin. I first heard it on the Poetry Unbound podcast, which I highly recommend. The host, Pádraig Ó Tuama, has a lovely Irish accent and offers a moving reflection on each poem.”</p>
                         <p>Wowww this poem is truly lovely and Pádraig’s voice is so soothing. Adding this to my adaptation toolkit immediately.</p>
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <h3>Correction</h3>
+                        <h2>Correction</h2>
                         <p>In the last issue I meant to link Naomi Shihab Nye’s name to <a href="https://poets.org/poem/gate-4">this poem</a>. Perhaps it was meant to be saved for this week.</p>
                         <p>Breathe through this. Cry through this. Scream through this. We’re here.</p>
                       </td>
@@ -274,10 +279,6 @@
                         <p>Got a recommendation of your own? Hit reply; I’d love to hear from you.</p>
 
                         <p><a href="https://letter-in-a-bottle.herokuapp.com/">Subscribe</a>, <a href="https://letter-in-a-bottle.herokuapp.com/unsubscribe">unsubscribe</a>, or <a href="https://letter-in-a-bottle.herokuapp.com/about">learn more</a> on the website.<p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
                         <p>This edition of May I Recommend was written under lockdown while tiny snowflakes swirl outside in Chicago, Illinois.</p>
                       </td>
                     </tr>

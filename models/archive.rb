@@ -1,5 +1,4 @@
-# aspirational
-
+require 'nokogiri'
 class Archive
   attr_reader :letters
 
@@ -9,20 +8,29 @@ class Archive
 
   def build_library
     letters = []
-    Dir.foreach('letters/inlined')  do |letter|
-      if letter != '.' && letter != '..'
-        letters << ArchiveLetter.new("letters/inlined/#{letter}")
+    Dir.foreach('letters')  do |letter|
+      unless ['.','..','inlined','scratch'].include?(letter)
+        letters << ArchiveLetter.new("letters/#{letter}")
       end
     end
-    letters.sort_by { |l| l.title }
+    letters.sort_by { |l| l.index }
   end
 end
 
 class ArchiveLetter
-  attr_reader :title, :html
+  attr_reader :index, :title, :html
   def initialize(filename)
-    #TODO: make titles prettier
-    @title = filename[16..17]
-    @html = File.read(filename)
+    @index = filename[8..9].to_i - 1
+    @html, @title = parse(filename)
+  end
+
+  def parse(filename)
+    page = ::Nokogiri::HTML.parse(File.read(filename))
+    table = page.css('table')[1].to_s
+    title = page.css('title').text[18..]
+
+    return table, title
   end
 end
+
+ARCHIVE = Archive.new
