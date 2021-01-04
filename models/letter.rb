@@ -1,7 +1,7 @@
 class Letter
 
   def initialize(title, path)
-    @subject = "May I Recommend ☞ #{title}"
+    @subject = "#{title}"
     @html = File.read(path)
     # @yaml = YAML.load_file(path)
   end
