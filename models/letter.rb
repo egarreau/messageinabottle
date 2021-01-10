@@ -10,7 +10,7 @@ class Letter
     {
       :from    => ["'Evangeline Garreau' #{ENV['gmail_user']}"],
       :to      => recipient,
-      :subject => @subject,
+      :subject => "Good Question ✧ #{@subject}",
       :html    => @html
     }
   end

@@ -8,10 +8,8 @@ class Archive
 
   def build_library
     letters = []
-    Dir.foreach('letters')  do |letter|
-      unless ['.','..','inlined','scratch'].include?(letter)
-        letters << ArchiveLetter.new("letters/#{letter}")
-      end
+    Dir.each_child('letters/may_i_recommend') do |letter|
+      letters << ArchiveLetter.new("letters/may_i_recommend/#{letter}")
     end
     letters.sort_by { |l| l.index }
   end

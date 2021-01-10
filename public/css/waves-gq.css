@@ -1,0 +1,233 @@
+/*
+🌊 Waves, a tiny, fussy stylesheet
+* by Evangeline Garreau
+* January 1, 2020
+* Structure shamelessly stolen from Skeleton (www.getskeleton.com)
+* 
+* refreshed August 4, 2020 by Annabeth Carroll to create the Lake Michigan remix 💙 
+*
+* revamped January 10, 2021 by Evangeline Garreau to create the Good Question remix
+*/
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+* Variables
+* Base Styles
+* Text
+* Header
+* Nav
+* Form
+* Misc
+* Media Queries
+*    - Note: styles are mobile-first, with desktop overrides found here
+* Archive-specific Styles
+*/
+
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  --royal-purp: #51217a;
+  --steely-dan: #595959;
+  --base-text: #2b2b2b;
+}
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+  font-size: 12px;
+  font-family: "Rosario", sans-serif;
+}
+
+body {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  text-align: center;
+  color: var(--base-text);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.paragraph {
+  line-height: 2rem;
+  margin: 5rem 0 5rem 0;
+  text-align: left;
+}
+
+/* Text
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1,
+h2,
+h3 {
+  font-family: "Ibarra Real Nova", serif;
+}
+
+p, ul {
+  color: var(--steely-dan);
+}
+
+a {
+  color: var(--royal-purp);
+  text-decoration: none;
+  font-weight: 900;
+}
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  line-height: 4rem;
+}
+
+.title {
+  margin: 0;
+}
+
+.supertitle {
+  margin-bottom: 0;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+}
+
+.supertitle,
+.subtitle {
+  font-style: italic;
+}
+
+/* Nav
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+nav {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 0.6rem double var(--royal-purp);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  padding: 0 1rem;
+  text-decoration: none;
+  color: var(--steely-dan);
+}
+
+/* Form
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+form {
+  margin: 0 0 2rem 0;
+}
+
+label {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+input[type="email"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; /* Removes awkward default styles on some inputs for iOS */
+  margin: 1rem 0;
+  border: 1rem solid var(--royal-purp);
+}
+
+input[type="submit"] {
+  border: none;
+  background: var(--royal-purp);
+  color: #fff;
+}
+
+input[type="email"],
+input[type="submit"] {
+  padding: 1rem;
+  display: block;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 0.3rem;
+  text-align: center;
+}
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.break {
+  display: block;
+  text-align: center;
+}
+
+a button {
+  border: none;
+  background-color: var(--royal-purp);
+  border-radius: 0.3rem;
+  padding: .5rem 1.5rem;
+  margin-right: 1rem;
+  color: #fff;
+  font-weight: normal;
+}
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Desktop */
+@media (min-width: 768px) {
+  .container {
+    max-width: 700px;
+    padding: 0 5rem 5rem 5rem;
+  }
+  nav {
+    margin-bottom: 4rem;
+  }
+  .nav-item {
+    padding: 0 3rem;
+  }
+  .header {
+    margin-bottom: 3rem;
+  }
+  form {
+    margin: 3rem;
+  }
+}
+
+/* Archive-specific Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+img {
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+table {
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+table h2 {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.dingbat {
+  color: #FF6D70;
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+ul.archive {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.archive li {
+  padding: .5rem;
+}
