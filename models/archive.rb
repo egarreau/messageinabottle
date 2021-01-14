@@ -18,7 +18,7 @@ end
 class ArchiveLetter
   attr_reader :index, :title, :html
   def initialize(filename)
-    @index = filename[8..9].to_i - 1
+    @index = filename[24..25].to_i - 1
     @html, @title = parse(filename)
   end
 
