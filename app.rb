@@ -29,6 +29,10 @@ class MessageInABottle < Sinatra::Base
     erb :letter, { layout: :layout_mir, locals: {letter: letter} }
   end
 
+  get '/viz' do
+    erb :viz
+  end
+
   post '/create' do
     email = params['email']
     reader = Reader.find_or_create_by(email: email)

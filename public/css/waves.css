@@ -72,6 +72,10 @@ a {
   font-weight: 900;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .header {

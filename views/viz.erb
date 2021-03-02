@@ -1,0 +1,153 @@
+<head>
+  <style>
+#tooltip { 
+  position: absolute;
+  text-align: center; 
+  width: 110px; 
+  padding: 5px 2px;  
+  font: 12px sans-serif;
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+  background: #e6e6e6;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+  opacity: 0;
+}
+  </style>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<h1>What time is it?</h1>
+<svg width="600" height="600">
+  <circle cx="300" cy="300" r="250" stroke-width="3" stroke="#666666" fill="white"/>
+  <g transform="rotate(180, 300,300)"></g>
+  <text font-family="Trebuchet MS, Helvetica, sans-serif" fill="#666666" font-size="36px" x="285", y="95">12</text>
+  <text font-family="Trebuchet MS, Helvetica, sans-serif" fill="#666666" font-size="36px" x="510", y="310">3</text>
+  <text font-family="Trebuchet MS, Helvetica, sans-serif" fill="#666666" font-size="36px" x="290", y="530">6</text>
+  <text font-family="Trebuchet MS, Helvetica, sans-serif" fill="#666666" font-size="36px" x="70", y="310">9</text>
+  <text font-family="Trebuchet MS, Helvetica, sans-serif" fill="#666666" font-size="22px" x="80", y="48">AM</text>
+  <text font-family="Trebuchet MS, Helvetica, sans-serif" fill="#666666" font-size="22px" x="80", y="78">PM</text>
+  <rect fill="#ffae00" x="50" y="30" width="20" height="20"></rect>
+  <rect fill="#3820a1" x="50" y="60" width="20" height="20"></rect>
+  <path stroke="none" fill="none" id="quote1" d="M 61 300 A 240 240 0 0 1 300 60" />
+  <path stroke="none" fill="none" id="quote2" d="M 95 435 A 240 240 0 0 0 300 545" />
+  <path stroke="none" fill="none" id="quote3" d="M 463 125 A 240 240 0 0 1 517 400" />
+  <text font-family="Trebuchet MS, Helvetica, sans-serif" fill="#666666" font-size="10px" width="600">
+    <textPath xlink:href="#quote1">"February, winter, feeling very much like the end of a year"</textPath>
+    <textPath xlink:href="#quote2">"Time for dinner on a bleakly familiar February day"</textPath>
+    <textPath xlink:href="#quote3">"The beginning of Week 3 (of 16) of Spring Semester."</textPath>
+  </text>
+</svg>
+<div id="tooltip"></div>
+<p>Data taken from <a href="https://docs.google.com/forms/d/e/1FAIpQLScSybGegQAg-YQhjXN_IF6BQyrd8bi3Wrcl_HY0StTikCaHOw/viewform?usp=sf_link">this form</a>, sent out February 2nd, 2021</p>
+<script>
+  var data = [
+    { angle: 227.0,
+      meridian: "PM",
+      caption: "19:34",
+      timezone: "Pacific"},
+    { angle: 331.0,
+      meridian: "PM",
+      caption: "11 pm",
+      timezone: "Eastern"},
+    { angle: 258.0,
+      meridian: "AM",
+      caption: "8:36am",
+      timezone: "Eastern"},
+    { angle: 301.0,
+      meridian: "AM",
+      caption: '10:02am, "a very productive time!"',
+      timezone: "Central"},
+    { angle: 335.5,
+      meridian: "AM",
+      caption: "11:11am",
+      timezone: "Eastern"},
+    { angle: 11.0,
+      meridian: "PM",
+      caption: "12:22pm",
+      timezone: "Eastern"},
+    { angle: 14.0,
+      meridian: "PM",
+      caption: "12:28pm",
+      timezone: "Eastern"},
+    { angle: 240.0,
+      meridian: "PM",
+      caption: "About 8 pm",
+      timezone: "Azores/Cape Verde"},
+    { angle: 229.5,
+      meridian: "PM",
+      caption: "7:39 PM",
+      timezone: "Eastern"},
+    { angle: 141.5,
+      meridian: "PM",
+      caption: "4:43 pm",
+      timezone: "Pacific"},
+    { angle: 167.5,
+      meridian: "PM",
+      caption: "5:35pm",
+      timezone: "Pacific"},
+    { angle: 200.5,
+      meridian: "PM",
+      caption: "6:41pm",
+      timezone: "Australian Eastern"},
+    { angle: 151.0,
+      meridian: "PM",
+      caption: "5:02 pm",
+      timezone: "Central"},
+    { angle: 220.5,
+      meridian: "PM",
+      caption: "19:21",
+      timezone: "Greenwich Mean"}];
+  var handLength = 150;
+  var handWidth = 6;
+  var div = d3.select('#tooltip');
+
+  var hands = d3.select('g')
+    .selectAll('circle')
+    .data(data)
+    .enter()
+    .append('rect')
+    .attr('x', '297')
+    .attr('y', '297')
+    .attr('rx', '9')
+    .attr('width', handWidth)
+    .attr('height', handLength)
+    .attr('fill', function(d) {
+      if (d.meridian == "AM") {
+        return "#ffae00";
+      } else {
+        return "#3820a1";
+      };
+    })
+    .attr('transform', function(d) {
+      return "rotate("+d.angle+", 300, 300)";
+    })
+  .on("mouseover", function(d) {    
+    div.transition()
+      .duration(200)
+      .style("opacity", .9);  
+    div.html(d.caption + "<br/> Time zone: " + d.timezone)  
+      .style("left", (d3.event.pageX) + "px")   
+      .style("top", (d3.event.pageY - 28) + "px");  
+  })          
+  .on("mouseout", function(d) {   
+    div.transition()    
+      .duration(500)    
+      .style("opacity", 0); 
+  });
+
+  var timeAngles = [30,60,120,150,210,240,300,330];
+  var ticks = d3.select('g')
+    .selectAll('circle')
+    .data(timeAngles)
+    .enter()
+    .append('rect')
+    .attr('x', '300')
+    .attr('y', '65')
+    .attr('width', '4')
+    .attr('height', '20')
+    .attr('fill', '#666666')
+    .attr('transform', function(d) {
+      return "rotate("+d+", 300, 300)";
+    });
+
+</script>
