@@ -22,6 +22,6 @@ class Mailer
     BOTTLE.send_message(ENV['mg_domain'], { :from    => ["'Evangeline Garreau' #{ENV['gmail_user']}"],
                                             :to      => reader.email,
                                             :subject => '🌊 Confirm your subscription to Good Question',
-                                            :html    => "<p>Thank you for subscribing to Good Question! <a href='http://mayirecommend.email/confirm-subscribe/#{reader.id}'>Click here to confirm your subscription</a>.</p>" })
+                                            :html    => "<p>Thank you for subscribing to Good Question! <a href='http://letters.evangelinegarreau.com/confirm-subscribe/#{reader.id}'>Click here to confirm your subscription</a>.</p>" })
   end
 end

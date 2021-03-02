@@ -1,6 +1,6 @@
 # Message in a Bottle
 
-A single-use, analytics-free email subscription platform built to distribute the newsletter May I Recommend. [Live site lives here](http://mayirecommend.email/).
+A single-use, analytics-free email subscription platform built to distribute my newsletter. [Live site lives here](http://letters.evangelinegarreau.com/).
 
 ## Why?
 
@@ -10,6 +10,6 @@ When I decided to start a newsletter, it was important to me to have a fully ana
 
 This is a simple Sinatra web app with a Postgres database and an artisanal HTML/CSS front end. It uses [Mailgun](https://www.mailgun.com/) to send emails (see [models/mailer](models/mailer.rb) to check out the logic). Each send is triggered from the command line via a [rake task](Rakefile), which takes in an HTML file (the email) and a subject line and sends to the subscriber list.
 
-## What's May I Recommend?
+## What's your newsletter?
 
-It's a fortnightly newsletter about stuff I think is good! [Subscribe here.](http://mayirecommend.email/subscribe)
+Currently it's called Good Question, a fortnightly essay based on survey responses to low-stakes, open-ended questions. [Subscribe here.](http://letters.evangelinegarreau.com/subscribe)
